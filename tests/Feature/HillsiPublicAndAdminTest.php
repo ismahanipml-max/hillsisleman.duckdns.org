@@ -33,8 +33,6 @@ class HillsiPublicAndAdminTest extends TestCase
         $response->assertSee('Indonesia Drone Training Center');
         $response->assertSee('Mengapa IDTC');
         $response->assertSee('Instruktur Berpengalaman');
-        $response->assertSee('Mitra');
-        $response->assertSee('UGM');
         $response->assertSee('Kunjungi Website Resmi');
         $response->assertSee('Galeri Sertifikasi dan Pelatihan (36 Foto)');
     }

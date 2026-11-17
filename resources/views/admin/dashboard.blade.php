@@ -38,16 +38,6 @@
     </div>
 
     <div class="stat-card">
-        <div class="stat-icon" style="background: rgba(21, 145, 155, 0.16); color: #15919B;">
-            🤝
-        </div>
-        <div class="stat-info">
-            <h3>{{ $totalPartners }}</h3>
-            <p>Mitra Kerjasama</p>
-        </div>
-    </div>
-
-    <div class="stat-card">
         <div class="stat-icon" style="background: rgba(128, 238, 152, 0.22); color: #0C6478;">
             📸
         </div>
