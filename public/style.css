@@ -91,7 +91,7 @@ h2{font-size:clamp(24px,3.5vw,34px);margin:4px 0 8px;font-weight:800;color:var(-
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.25s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.card h3{margin:10px 0 6px;font-size:18px;color:var(--text)}.card p{margin:0;color:var(--muted);font-size:15px}
+.card h3{margin:14px 0 8px;font-size:19px;font-weight:700;color:var(--text)}.card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.7;text-align:justify;text-justify:inter-word}
 .ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#15919B,#213A58);color:#fff;display:grid;place-items:center;font-size:26px;box-shadow:0 6px 16px rgba(12,100,120,.2)}
 .roles{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .roles span{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:9px 18px;font-weight:600;font-size:14px}
