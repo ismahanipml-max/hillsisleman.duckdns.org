@@ -96,7 +96,7 @@ return `<div class="hero"><div class="blob b1"></div><div class="blob b2"></div>
 function draw(){
 var h="",n=0;
 L.forEach(function(x){if((CAT!=="Semua"&&x.f!==CAT)||!match(x,Q))return;n++;
-h+=`<div class="lc" onclick="go('${x.id}')"><div class="cv" style="background:linear-gradient(135deg,${x.c},#000a)">${x.logo?`<img src="${x.logo}" alt="${esc(x.n)}" style="max-height:76px;max-width:80%;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.45))">`:x.e}</div><div class="b"><h4>${esc(x.n)}</h4><span class="pill">${esc(x.f)}</span></div><span class="go">→</span></div>`});
+h+=`<div class="lc" onclick="go('${x.id}')"><div class="cv" style="background:linear-gradient(135deg,${x.c},#000a)">${x.logo?`<img src="${x.logo}" alt="${esc(x.n)}" style="max-height:76px;max-width:80%;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.45))">`:x.e}</div><div class="b"><h4>${esc(x.n)}</h4><span class="pill">${esc(x.f)}</span></div></div>`});
 $("list").innerHTML=h||'<div class="empty">😕 Tidak ada lembaga yang cocok. Coba kata kunci lain.</div>';
 $("cnt").textContent=n+" dari "+L.length+" lembaga";
 $("rs").innerHTML=Q.trim()?'· Hasil untuk “'+esc(Q.trim())+'” <button class="rst" onclick="resetQ()">Reset</button>':"";

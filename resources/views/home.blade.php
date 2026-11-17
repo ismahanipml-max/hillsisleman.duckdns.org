@@ -243,7 +243,6 @@ function draw() {
     h += '<a class="lc" href="' + x.url + '">' +
          '<div class="cv" style="background:linear-gradient(135deg,' + x.c + ',#000a)">' + media + '</div>' +
          '<div class="b"><h4>' + esc(x.n) + '</h4><span class="pill">' + esc(x.f) + '</span>' + svcSnippet + '</div>' +
-         '<span class="go">→</span>' +
          '</a>';
   });
 
