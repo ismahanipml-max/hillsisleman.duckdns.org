@@ -1,0 +1,20 @@
+name: hillsisleman
+
+services:
+  app:
+    build: .
+    image: hillsisleman:latest
+    container_name: hillsisleman
+    restart: unless-stopped
+    env_file: .env.docker
+    volumes:
+      - storage:/var/www/html/storage
+    networks:
+      - n8n_default
+
+volumes:
+  storage:
+
+networks:
+  n8n_default:
+    external: true
