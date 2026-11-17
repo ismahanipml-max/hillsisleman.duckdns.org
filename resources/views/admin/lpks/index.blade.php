@@ -117,9 +117,6 @@
                                 <span class="pill pill-muted" title="{{ $lpk->services_count }} Layanan">
                                     🛠️ {{ $lpk->services_count }}
                                 </span>
-                                <span class="pill pill-muted" title="{{ $lpk->partners_count }} Mitra">
-                                    🤝 {{ $lpk->partners_count }}
-                                </span>
                                 <span class="pill pill-muted" title="{{ $lpk->galleries_count }} Foto">
                                     📸 {{ $lpk->galleries_count }}
                                 </span>
@@ -225,28 +222,20 @@
                     </div>
                 </div>
 
-                <!-- Section 2: Layanan & Mitra -->
+                <!-- Section 2: Layanan Pelatihan -->
                 <div style="margin-bottom: 24px; padding-top: 18px; border-top: 1px solid var(--border);">
                     <h4 style="font-size: 14px; font-weight: 800; color: var(--brand); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
                         <span>🛠️</span>
-                        <span>Program & Kerjasama</span>
+                        <span>Layanan Pelatihan</span>
                     </h4>
 
                     <div class="form-grid">
                         <!-- Layanan (textarea, satu per baris) -->
-                        <div class="form-group">
+                        <div class="form-group col-full">
                             <label class="form-label" for="formLayanan">
                                 Layanan Pelatihan <span class="form-hint">(Satu layanan per baris)</span>
                             </label>
                             <textarea name="layanan" id="formLayanan" class="form-control" rows="5" placeholder="Pelatihan drone dasar&#10;Pemetaan dan fotogrametri&#10;Pertanian&#10;Pertambangan&#10;Inspeksi industri"></textarea>
-                        </div>
-
-                        <!-- Mitra, opsional (textarea, satu per baris) -->
-                        <div class="form-group">
-                            <label class="form-label" for="formMitra">
-                                Mitra Kerjasama <span class="form-hint">(Opsional, satu mitra per baris)</span>
-                            </label>
-                            <textarea name="mitra" id="formMitra" class="form-control" rows="5" placeholder="UGM&#10;AMIKOM&#10;Dinas Pendidikan Sleman&#10;Disnaker Sleman&#10;BPBD Bantul"></textarea>
                         </div>
                     </div>
                 </div>
@@ -410,7 +399,7 @@
                     Hapus LPK Ini?
                 </h4>
                 <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5;">
-                    Apakah Anda yakin ingin menghapus <strong id="deleteLpkName" style="color: var(--text);"></strong>? Seluruh layanan, mitra, dan foto galeri terkait akan ikut terhapus secara permanen.
+                    Apakah Anda yakin ingin menghapus <strong id="deleteLpkName" style="color: var(--text);"></strong>? Seluruh layanan dan foto galeri terkait akan ikut terhapus secara permanen.
                 </p>
             </div>
 
@@ -511,7 +500,6 @@
                 document.getElementById('formTagline').value = data.tagline || '';
                 document.getElementById('formTentang').value = data.tentang || '';
                 document.getElementById('formLayanan').value = data.layanan || '';
-                document.getElementById('formMitra').value = data.mitra || '';
                 document.getElementById('formAdmin').value = data.nama_admin || '';
                 document.getElementById('formWa').value = data.whatsapp || '';
                 document.getElementById('formEmail').value = data.email || '';

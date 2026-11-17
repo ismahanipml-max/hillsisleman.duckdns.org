@@ -121,15 +121,6 @@
     </div>
   @endif
 
-  {{-- Bagian "Mitra" (hanya muncul jika datanya ada) --}}
-  @if($lpk->partners->count() > 0)
-    <h2 style="margin-top:40px">Mitra</h2>
-    <div class="roles" style="margin-top:16px">
-      @foreach($lpk->partners as $partner)
-        <span>{{ $partner->nama_mitra }}</span>
-      @endforeach
-    </div>
-  @endif
 
   {{-- Galeri --}}
   @php

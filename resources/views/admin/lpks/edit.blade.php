@@ -163,18 +163,13 @@
                     </div>
                 </div>
 
-                <!-- Card 4: Layanan & Mitra -->
+                <!-- Card 4: Layanan Pelatihan -->
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">4. Layanan & Mitra</h3>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">4. Layanan Pelatihan</h3>
                     <div class="space-y-4">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-1">Daftar Layanan (Satu baris untuk setiap layanan)</label>
                             <textarea name="layanan" rows="5" class="w-full rounded-lg border-gray-300 focus:border-teal-500 focus:ring-teal-500">{{ old('layanan', $lpk->services->pluck('nama_layanan')->implode("\n")) }}</textarea>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-1">Daftar Mitra (Pisahkan dengan koma atau baris baru)</label>
-                            <textarea name="mitra" rows="3" class="w-full rounded-lg border-gray-300 focus:border-teal-500 focus:ring-teal-500">{{ old('mitra', $lpk->partners->pluck('nama_mitra')->implode(', ')) }}</textarea>
                         </div>
                     </div>
                 </div>
