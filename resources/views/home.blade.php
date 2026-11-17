@@ -37,17 +37,17 @@
       <div class="card rv">
         <div class="ic">🏛️</div>
         <h3>HILLSI</h3>
-        <p style="text-align: justify; text-justify: inter-word; line-height: 1.7;">Himpunan Lembaga Pelatihan Seluruh Indonesia yang berdiri sejak 1982 sebagai wadah komunikasi, konsultasi, dan standardisasi mutu pelatihan kerja secara nasional.</p>
+        <p style="text-align: left; line-height: 1.65;">Himpunan Lembaga Pelatihan Seluruh Indonesia yang berdiri sejak 1982 sebagai wadah komunikasi, konsultasi, dan standardisasi mutu pelatihan kerja secara nasional.</p>
       </div>
       <div class="card rv">
         <div class="ic">📍</div>
         <h3>DPC Kabupaten Sleman</h3>
-        <p style="text-align: justify; text-justify: inter-word; line-height: 1.7;">Dewan Pimpinan Cabang yang menaungi, membina, dan mengoordinasikan puluhan Lembaga Pelatihan Kerja (LPK) resmi di wilayah Kabupaten Sleman, D.I. Yogyakarta.</p>
+        <p style="text-align: left; line-height: 1.65;">Dewan Pimpinan Cabang yang menaungi, membina, dan mengoordinasikan puluhan Lembaga Pelatihan Kerja (LPK) resmi di wilayah Kabupaten Sleman, D.I. Yogyakarta.</p>
       </div>
       <div class="card rv">
         <div class="ic">🎯</div>
         <h3>Tujuan Utama</h3>
-        <p style="text-align: justify; text-justify: inter-word; line-height: 1.7;">Meningkatkan kompetensi SDM unggul, memperkuat kemitraan dengan industri dan pemerintah (link and match), serta memperluas kesempatan kerja melalui vokasi.</p>
+        <p style="text-align: left; line-height: 1.65;">Meningkatkan kompetensi SDM unggul, memperkuat kemitraan dengan industri dan pemerintah (link and match), serta memperluas kesempatan kerja melalui vokasi.</p>
       </div>
     </div>
   </div>
