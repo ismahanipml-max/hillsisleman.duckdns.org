@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DPC HILLSI Kabupaten Sleman</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<div class="logo" onclick="go('')"><i>HS</i><span>HILLSI Sleman</span></div>
+<nav><a onclick="go('')">Beranda</a><a onclick="sec('tentang')">Tentang</a><a onclick="sec('lembaga')">Lembaga</a><a onclick="sec('kontak')">Kontak</a></nav>
+</div></header>
+<main id="app"></main>
+<footer>© 2026 DPC HILLSI Kabupaten Sleman · hillsisleman.duckdns.org</footer>
+
+<div id="lb" class="lb" onclick="closeLb(event)">
+  <button class="lb-c" onclick="closeLb()" aria-label="Tutup">&times;</button>
+  <button class="lb-btn lb-prev" onclick="prevLb(event)" aria-label="Sebelumnya">&#10094;</button>
+  <img id="lb-img" src="" alt="Perbesar Foto">
+  <button class="lb-btn lb-next" onclick="nextLb(event)" aria-label="Selanjutnya">&#10095;</button>
+  <div id="lb-cnt" class="lb-cnt"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
