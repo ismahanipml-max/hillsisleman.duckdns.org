@@ -71,7 +71,7 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;
 function match(x,q){q=q.trim().toLowerCase();return !q||q.split(/\s+/).every(function(w){return x.k.indexOf(w)>-1})}
 function home(){
 var cats=["Semua"].concat(L.map(function(x){return x.f}));
-return `<div class="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap">
+return `<div class="hero"><div class="wrap">
 <span class="tag">Sejak 1982 · Dewan Pimpinan Cabang Sleman</span>
 <h1>Wadah Bersama <em>Lembaga Pelatihan Kerja</em> di Kabupaten Sleman</h1>
 <p class="lead">Mengoordinasikan LPK untuk meningkatkan mutu kompetensi SDM, bersinergi dengan pemerintah dan industri, serta menekan angka pengangguran.</p>

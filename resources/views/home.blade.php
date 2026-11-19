@@ -4,8 +4,6 @@
 
 @section('content')
 <div class="hero">
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
   <div class="wrap">
     <h1>Wadah Bersama <em>Lembaga Pelatihan Kerja</em> di Kabupaten Sleman</h1>
     <p class="lead">{{ $settings['hero_deskripsi'] ?? 'Mengoordinasikan LPK untuk meningkatkan mutu kompetensi SDM, bersinergi dengan pemerintah dan industri, serta menekan angka pengangguran.' }}</p>
