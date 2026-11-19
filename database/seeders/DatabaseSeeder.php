@@ -201,5 +201,8 @@ class DatabaseSeeder extends Seeder
                 ]);
             }
         }
+
+        // 5. Additional 12 Dummy LPKs
+        $this->call(DummyLpkSeeder::class);
     }
 }
