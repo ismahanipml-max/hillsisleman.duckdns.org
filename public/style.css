@@ -201,19 +201,21 @@ footer{background:#213A58;color:#b8d4dc;text-align:center;padding:28px 20px;font
 .news-pagi-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
 .news-count-text{text-align:center;margin-top:14px;font-size:13.5px;color:#8fa6b2;font-weight:600}
 
-/* Modal Baca Artikel Kegiatan */
-.art-modal{position:fixed;inset:0;background:rgba(10,20,32,.88);backdrop-filter:blur(8px);z-index:998;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
-.art-modal.on{display:flex}
-.art-modal-box{background:var(--surface);border:1px solid var(--line);border-radius:20px;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:var(--shadow);position:relative;margin:auto}
-.art-modal-header{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000}
+/* Modal Baca Artikel Kegiatan (Fullscreen View) */
+.art-modal{position:fixed;inset:0;width:100vw;height:100vh;background:var(--surface);z-index:9999;display:none;overflow-y:auto;overflow-x:hidden;padding:0;margin:0}
+.art-modal.on{display:block}
+.art-modal-box{background:var(--surface);width:100%;min-height:100vh;margin:0;border:none;border-radius:0;box-shadow:none;display:flex;flex-direction:column}
+.art-modal-top-bar{position:sticky;top:0;z-index:100;background:rgba(10,20,32,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 28px;display:flex;align-items:center;justify-content:space-between}
+:root[data-theme="light"] .art-modal-top-bar{background:rgba(255,255,255,.94)}
+.art-modal-inner{max-width:960px;width:100%;margin:0 auto;padding:0 24px 60px;flex:1;display:flex;flex-direction:column}
+.art-modal-header{position:relative;width:100%;height:clamp(280px,42vw,480px);border-radius:18px;margin-top:24px;overflow:hidden;background:#0b1d28;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .art-modal-header img{width:100%;height:100%;object-fit:cover;display:block}
-.art-modal-close{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;border:0;cursor:pointer;font-size:22px;line-height:1;display:grid;place-items:center;transition:.2s;z-index:2}
-.art-modal-close:hover{background:#15919B;transform:scale(1.08)}
-.art-modal-content{padding:26px 30px}
-.art-modal-content h2{font-size:clamp(20px,3.5vw,26px);line-height:1.35;margin:0 0 16px;font-weight:800;color:var(--text)}
-.art-modal-author{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--bg);border-radius:12px;margin-bottom:22px;font-size:13px;color:var(--muted)}
-.art-modal-body{color:var(--text);font-size:15px;line-height:1.75}
-.art-modal-body p{margin:0 0 16px;text-align:left}
-.art-modal-footer{padding:16px 30px;border-top:1px solid var(--line);display:flex;justify-content:flex-end}
+.art-modal-content{padding:30px 0 0;flex:1}
+.art-modal-content h1{font-size:clamp(22px,3.8vw,34px);line-height:1.35;margin:0 0 18px;font-weight:800;color:var(--text);letter-spacing:-.5px}
+.art-modal-author{display:flex;align-items:center;gap:10px;padding:12px 18px;background:var(--bg);border:1px solid var(--line);border-radius:12px;margin-bottom:26px;font-size:13.5px;color:var(--muted);flex-wrap:wrap}
+.art-modal-body{color:var(--text);font-size:16.5px;line-height:1.85}
+.art-modal-body p{margin:0 0 20px;text-align:left}
+.art-modal-footer{margin-top:40px;padding:24px 0 20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+@media(max-width:640px){.art-modal-top-bar{padding:12px 16px}.art-modal-top-title{display:none}.art-modal-inner{padding:0 16px 40px}.art-modal-header{border-radius:12px;margin-top:14px;height:230px}}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.blob{animation:none}}

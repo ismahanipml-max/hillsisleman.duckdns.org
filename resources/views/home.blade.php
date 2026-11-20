@@ -356,43 +356,51 @@
   </div>
 </section>
 
-<!-- Modal Pop-up Baca Artikel Lengkap -->
+<!-- Modal Pop-up Baca Artikel Lengkap (Fullscreen View) -->
 <div id="artModal" class="art-modal" onclick="closeArtModal(event)">
   <div class="art-modal-box">
-    <div class="art-modal-top-bar" style="display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--line);">
-      <button type="button" class="btn s" onclick="closeArtModal()" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:7px 14px;border-radius:8px;">
+    <!-- Sticky Top Navigation Bar -->
+    <div class="art-modal-top-bar">
+      <button type="button" class="btn s" onclick="closeArtModal()" style="display:inline-flex;align-items:center;gap:8px;font-size:13.5px;padding:8px 16px;border-radius:10px;font-weight:700;">
         <span>&larr;</span>
         <span>Kembali ke Berita</span>
       </button>
-      <button type="button" class="art-modal-close-icon" onclick="closeArtModal()" aria-label="Tutup" style="background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;line-height:1;">&times;</button>
-    </div>
-    <div id="artModalHeaderWrap" class="art-modal-header" style="position:relative;width:100%;height:240px;overflow:hidden;background:#0b1d28;display:flex;align-items:center;justify-content:center;">
-      <img id="artModalImg" src="" alt="Foto Berita" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <div id="artModalFallback" style="width:100%;height:100%;display:none;position:relative;overflow:hidden;"></div>
-    </div>
-    <div class="art-modal-content" style="padding:26px 30px;">
-      <div class="art-meta" style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
-        <span id="artModalDate" style="font-size:13px;color:var(--muted);font-weight:600;"></span>
-        <span id="artModalTag" class="art-tag"></span>
+      <div class="art-modal-top-title" style="font-size:13.5px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:8px;">
+        <span>📰 Berita &amp; Kegiatan DPC HILLSI Sleman</span>
       </div>
-      <h2 id="artModalTitle" style="font-size:clamp(20px,3.5vw,26px);line-height:1.4;margin:0 0 16px;font-weight:800;color:var(--text);"></h2>
-      <div class="art-modal-author" style="display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--bg);border-radius:12px;margin-bottom:22px;font-size:13px;color:var(--muted);">
-        <span>✍️ Ditulis oleh: <b id="artModalAuthor" style="color:var(--text);"></b></span>
-        <span>•</span>
-        <span>📍 DPC HILLSI Sleman</span>
-      </div>
-      <div id="artModalBody" class="art-modal-body" style="font-size:15px;line-height:1.75;color:var(--text);"></div>
-      <div id="artModalSourceWrap" style="margin-top:24px;display:none;">
-        <a id="artModalSourceLink" href="#" target="_blank" rel="noopener" class="btn p" style="background:#15919B;color:#fff;border-radius:10px;padding:10px 20px;font-weight:700;display:inline-flex;align-items:center;gap:8px;text-decoration:none;box-shadow:0 4px 14px rgba(21,145,155,0.35);">
-          <span>🌐</span>
-          <span id="artModalSourceText">Buka Sumber Berita Resmi</span>
-          <span>↗</span>
-        </a>
-      </div>
+      <button type="button" class="art-modal-close-icon" onclick="closeArtModal()" aria-label="Tutup" style="background:rgba(255,255,255,0.08);border:1px solid var(--line);color:var(--text);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;line-height:1;transition:all .2s ease;">&times;</button>
     </div>
-    <div class="art-modal-footer" style="padding:16px 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;">
-      <span style="font-size:12.5px;color:var(--muted);">DPC HILLSI Kabupaten Sleman</span>
-      <button type="button" class="btn s" onclick="closeArtModal()" style="display:inline-flex;align-items:center;gap:6px;">&larr; Kembali ke Berita</button>
+
+    <!-- Scrollable Inner Content Area -->
+    <div class="art-modal-inner">
+      <div id="artModalHeaderWrap" class="art-modal-header">
+        <img id="artModalImg" src="" alt="Foto Berita" style="display:none;">
+        <div id="artModalFallback" style="width:100%;height:100%;display:none;position:relative;overflow:hidden;"></div>
+      </div>
+      <div class="art-modal-content">
+        <div class="art-meta" style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+          <span id="artModalDate" style="font-size:13.5px;color:var(--muted);font-weight:600;"></span>
+          <span id="artModalTag" class="art-tag"></span>
+        </div>
+        <h1 id="artModalTitle" style="font-size:clamp(22px,3.8vw,34px);line-height:1.35;margin:0 0 18px;font-weight:800;color:var(--text);letter-spacing:-0.5px;"></h1>
+        <div class="art-modal-author" style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:var(--bg);border:1px solid var(--line);border-radius:12px;margin-bottom:26px;font-size:13.5px;color:var(--muted);flex-wrap:wrap;">
+          <span>✍️ Ditulis oleh: <b id="artModalAuthor" style="color:var(--text);"></b></span>
+          <span>•</span>
+          <span>📍 DPC HILLSI Sleman</span>
+        </div>
+        <div id="artModalBody" class="art-modal-body" style="font-size:16.5px;line-height:1.85;color:var(--text);"></div>
+        <div id="artModalSourceWrap" style="margin-top:28px;display:none;">
+          <a id="artModalSourceLink" href="#" target="_blank" rel="noopener" class="btn p" style="background:#15919B;color:#fff;border-radius:10px;padding:12px 24px;font-weight:700;display:inline-flex;align-items:center;gap:8px;text-decoration:none;box-shadow:0 4px 14px rgba(21,145,155,0.35);">
+            <span>🌐</span>
+            <span id="artModalSourceText">Buka Sumber Berita Resmi</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="art-modal-footer">
+        <span style="font-size:13px;color:var(--muted);">DPC HILLSI Kabupaten Sleman &bull; Pelatihan Vokasi &amp; Sertifikasi</span>
+        <button type="button" class="btn s" onclick="closeArtModal()" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:10px;font-weight:700;">&larr; Kembali ke Berita</button>
+      </div>
     </div>
   </div>
 </div>
@@ -641,6 +649,7 @@ function openArticle(id) {
   var m = $("artModal");
   if (m) {
     m.classList.add("on");
+    document.body.style.overflow = "hidden";
     m.scrollTop = 0;
     var box = m.querySelector(".art-modal-box");
     if (box) box.scrollTop = 0;
@@ -648,11 +657,14 @@ function openArticle(id) {
 }
 
 function closeArtModal(e) {
-  if (e && e.target && e.target.closest(".art-modal-box") && !e.target.closest(".art-modal-close-icon") && !e.target.closest(".btn") && !e.target.classList.contains("art-modal-close-icon")) {
+  if (e && e.target && !e.target.closest(".art-modal-close-icon") && !e.target.closest(".btn") && !e.target.classList.contains("art-modal-close-icon") && !e.target.classList.contains("art-modal")) {
     return;
   }
   var m = $("artModal");
-  if (m) m.classList.remove("on");
+  if (m) {
+    m.classList.remove("on");
+    document.body.style.overflow = "";
+  }
 }
 
 document.addEventListener("keydown", function(e) {
