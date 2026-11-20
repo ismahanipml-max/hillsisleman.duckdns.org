@@ -357,8 +357,8 @@ function renderArticles() {
   var h = "";
   items.forEach(function(a) {
     h += '<div class="lc rv in" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca artikel lengkap">' +
-           '<div class="cv" style="background:linear-gradient(135deg,' + a.warna + ',#000a)">' +
-             '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" style="max-height:76px;max-width:82%;object-fit:cover;border-radius:10px;position:relative;z-index:1;filter:drop-shadow(0 3px 8px rgba(0,0,0,.5))">' +
+           '<div class="kegiatan-cv">' +
+             '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" loading="lazy">' +
            '</div>' +
            '<div class="b">' +
              '<h4>' + esc(a.judul) + '</h4>' +
