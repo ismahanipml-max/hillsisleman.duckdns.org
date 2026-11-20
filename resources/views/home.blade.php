@@ -84,6 +84,83 @@
   </div>
 </section>
 
+@php
+  $kegiatanList = [
+    [
+      'judul' => 'Rapat Koordinasi & Pembinaan Lembaga Pelatihan Kerja se-Sleman',
+      'kategori' => 'Koordinasi DPC',
+      'waktu' => 'Agenda Rutin',
+      'foto' => asset('images/idtc/foto1.jpg'),
+      'deskripsi' => 'Pertemuan berkala pengurus DPC HILLSI Sleman bersama para pimpinan LPK untuk penguatan tata kelola lembaga dan standardisasi mutu pelatihan kerja.',
+    ],
+    [
+      'judul' => 'Pelatihan Berbasis Kompetensi (PBK) & Penguasaan Teknologi Terapan',
+      'kategori' => 'Pelatihan Vokasi',
+      'waktu' => 'Program Berjalan',
+      'foto' => asset('images/idtc/foto13.jpg'),
+      'deskripsi' => 'Praktik langsung pengoperasian teknologi dan metodologi pelatihan modern guna mencetak instruktur serta tenaga kerja yang kompeten dan siap pakai.',
+    ],
+    [
+      'judul' => 'Uji Kompetensi & Asesmen Sertifikasi Standar BNSP',
+      'kategori' => 'Sertifikasi Nasional',
+      'waktu' => 'Sertifikasi Resmi',
+      'foto' => asset('images/idtc/foto7.jpg'),
+      'deskripsi' => 'Penyelenggaraan asesmen kompetensi resmi untuk memastikan setiap lulusan memiliki sertifikat keahlian yang diakui secara nasional oleh BNSP.',
+    ],
+    [
+      'judul' => 'Workshop Sinkronisasi Kurikulum Vokasi dengan Dunia Industri (Link & Match)',
+      'kategori' => 'Kemitraan Industri',
+      'waktu' => 'Kolaborasi Industri',
+      'foto' => asset('images/idtc/foto2.jpg'),
+      'deskripsi' => 'Penyelarasan materi ajar LPK dengan standar kebutuhan dunia kerja dan industri (DUDI) untuk mempercepat penyerapan lulusan pelatihan.',
+    ],
+    [
+      'judul' => 'Simulasi Lapangan & Standar Keselamatan Kerja (K3) Vokasi',
+      'kategori' => 'Praktik & K3',
+      'waktu' => 'Praktik Lapangan',
+      'foto' => asset('images/idtc/foto11.jpg'),
+      'deskripsi' => 'Pembekalan prosedur keselamatan penerbangan, pengoperasian alat industri, dan penanganan risiko kerja di lapangan secara profesional.',
+    ],
+    [
+      'judul' => 'Sinergi Pembinaan Tenaga Kerja Bersama Dinas Tenaga Kerja Kabupaten Sleman',
+      'kategori' => 'Sinergi Pemerintah',
+      'waktu' => 'Forum Bersama',
+      'foto' => asset('images/idtc/foto10.jpg'),
+      'deskripsi' => 'Kerjasama strategis antara HILLSI Sleman dan Disnaker dalam rangka pelatihan vokasi masyarakat serta pengurangan angka pengangguran daerah.',
+    ],
+  ];
+@endphp
+
+<section id="kegiatan">
+  <div class="wrap">
+    <div class="eye rv">Kegiatan</div>
+    <h2 class="rv">Program & Aktivitas DPC HILLSI Sleman</h2>
+    <p class="sub rv" style="max-width:none">Dokumentasi koordinasi kelembagaan, pelatihan vokasi, sertifikasi kompetensi, dan sinergi kemitraan bersama instansi pemerintah serta dunia industri.</p>
+
+    <div class="kegiatan-grid">
+      @foreach($kegiatanList as $idx => $k)
+        <div class="kegiatan-card rv">
+          <div class="kegiatan-thumb" onclick="openHomeLb({{ $idx }})" title="Klik untuk melihat foto dokumentasi">
+            <img src="{{ $k['foto'] }}" alt="{{ $k['judul'] }}" loading="lazy">
+            <div class="kegiatan-zoom">🔍</div>
+          </div>
+          <div class="kegiatan-body">
+            <div class="kegiatan-meta">
+              <span class="kegiatan-tag">{{ $k['kategori'] }}</span>
+              <span class="kegiatan-time">{{ $k['waktu'] }}</span>
+            </div>
+            <h3>{{ $k['judul'] }}</h3>
+            <p>{{ $k['deskripsi'] }}</p>
+            <div class="kegiatan-foot">
+              <span>📍 Kabupaten Sleman, D.I. Yogyakarta</span>
+            </div>
+          </div>
+        </div>
+      @endforeach
+    </div>
+  </div>
+</section>
+
 <section id="kontak">
   <div class="wrap">
     <div class="eye rv">Kontak</div>
@@ -199,6 +276,11 @@
 @push('scripts')
 <script>
 var L = {!! json_encode($lpksJson) !!};
+window._kegiatanPhotos = @json(array_column($kegiatanList, 'foto'));
+function openHomeLb(idx) {
+  window._galleryList = window._kegiatanPhotos;
+  openLb(idx);
+}
 
 var Q = "", CAT = "Semua";
 var PAGE = 1;

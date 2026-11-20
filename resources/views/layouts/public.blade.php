@@ -16,6 +16,7 @@
   <a href="{{ url('/') }}">Beranda</a>
   <a href="{{ url('/#tentang') }}">Tentang</a>
   <a href="{{ url('/#lembaga') }}">LPK Pelatihan</a>
+  <a href="{{ url('/#kegiatan') }}">Kegiatan</a>
   <a href="{{ url('/#kontak') }}">Kontak</a>
 </nav>
 </div></header>
