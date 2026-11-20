@@ -87,7 +87,7 @@
 @php
   $kegiatanArticles = [
     [
-      'id' => 0,
+      'id' => 1,
       'ikon' => '🏛️',
       'warna' => '#0b5d63',
       'judul' => 'Rapat Koordinasi DPC HILLSI Sleman Perkuat Standardisasi dan Mutu Vokasi 2026',
@@ -103,7 +103,7 @@
       ],
     ],
     [
-      'id' => 1,
+      'id' => 2,
       'ikon' => '💻',
       'warna' => '#c2410c',
       'judul' => 'Pelatihan Berbasis Kompetensi Teknologi Terapan Sukses Diikuti Puluhan Instruktur',
@@ -119,7 +119,7 @@
       ],
     ],
     [
-      'id' => 2,
+      'id' => 3,
       'ikon' => '📜',
       'warna' => '#1d4ed8',
       'judul' => 'Asesmen dan Uji Kompetensi Nasional BNSP Resmi Digelar Serentak di Sleman',
@@ -135,7 +135,7 @@
       ],
     ],
     [
-      'id' => 3,
+      'id' => 4,
       'ikon' => '🤝',
       'warna' => '#047857',
       'judul' => "Sinkronisasi Kurikulum 'Link and Match' Pererat Sinergi LPK dengan Mitra Industri",
@@ -151,7 +151,7 @@
       ],
     ],
     [
-      'id' => 4,
+      'id' => 5,
       'ikon' => '🛡️',
       'warna' => '#b45309',
       'judul' => 'Penerapan SOP Keselamatan dan Kesehatan Kerja (K3) Jadi Standar Baku Seluruh LPK',
@@ -167,7 +167,7 @@
       ],
     ],
     [
-      'id' => 5,
+      'id' => 6,
       'ikon' => '🏢',
       'warna' => '#7e22ce',
       'judul' => 'Kolaborasi DPC HILLSI dan Disnaker Sleman Sukses Gelar Bursa Pelatihan Vokasi',
@@ -182,21 +182,117 @@
         'Kepala Dinas Tenaga Kerja Sleman mengapresiasi peran aktif DPC HILLSI sebagai mitra strategis pemerintah daerah dalam menekan angka pengangguran terbuka dan mendongkrak indeks kualitas SDM di Kabupaten Sleman.',
       ],
     ],
+    [
+      'id' => 7,
+      'ikon' => '📱',
+      'warna' => '#0284c7',
+      'judul' => 'Workshop Digital Marketing & Branding Lembaga Pelatihan untuk Pengelola LPK',
+      'kategori' => 'Manajemen LPK',
+      'tanggal' => '17 Oktober 2026',
+      'penulis' => 'Bidang Humas & Media',
+      'foto' => asset('images/idtc/foto3.jpg'),
+      'ringkasan' => 'Program pembekalan strategi pemasaran digital, optimasi media sosial, dan branding institusi guna memperluas jangkauan pendaftaran calon peserta didik vokasi.',
+      'isi' => [
+        'SLEMAN — Di era serba digital, kemampuan branding institusi pelatihan menjadi aspek krusial dalam menarik minat calon peserta pelatihan. DPC HILLSI Sleman mengadakan workshop digital marketing yang diikuti para admin dan staf promosi LPK se-Sleman.',
+        'Pelatihan ini membahas optimasi profil bisnis daring, pembuatan konten video edukatif di media sosial, strategi periklanan terarah, serta pemanfaatan analitik web untuk mengevaluasi efektivitas kampanye promosi kursus.',
+        'Melalui pelatihan ini, setiap LPK diharapkan dapat meningkatkan visibilitas profil lembaganya dan mempermudah generasi muda menemukan pelatihan yang sesuai dengan minat dan bakat mereka.',
+      ],
+    ],
+    [
+      'id' => 8,
+      'ikon' => '🏅',
+      'warna' => '#059669',
+      'judul' => 'Fasilitasi Akreditasi Lembaga Pelatihan Kerja Guna Tingkatkan Kredibilitas Mutu',
+      'kategori' => 'Akreditasi Mutu',
+      'tanggal' => '12 Oktober 2026',
+      'penulis' => 'Divisi Penjaminan Mutu',
+      'foto' => asset('images/idtc/foto8.jpg'),
+      'ringkasan' => 'DPC HILLSI Sleman memberikan pendampingan intensif bagi pengelola LPK dalam penyusunan borang dan pemenuhan 8 standar akreditasi kelembagaan LA-LPK.',
+      'isi' => [
+        'SLEMAN — Status akreditasi merupakan tolok ukur kredibilitas dan jaminan kualitas layanan pelatihan suatu LPK. Guna mendorong percepatan akreditasi, DPC HILLSI menyelenggarakan klinik pendampingan borang akreditasi.',
+        'Narasumber ahli membimbing peserta langkah demi langkah dalam memverifikasi 8 standar mutu akreditasi, meliputi kurikulum, sarana prasarana, kualifikasi instruktur, hingga tata kelola keuangan.',
+        'Dengan bertambahnya LPK yang terakreditasi di Sleman, kepercayaan masyarakat dan industri terhadap mutu lulusan pelatihan kerja akan semakin meningkat secara signifikan.',
+      ],
+    ],
+    [
+      'id' => 9,
+      'ikon' => '💡',
+      'warna' => '#d97706',
+      'judul' => 'Pemberdayaan Lulusan Vokasi Melalui Inkubasi Wirausaha Mandiri Kreatif',
+      'kategori' => 'Kewirausahaan',
+      'tanggal' => '5 Oktober 2026',
+      'penulis' => 'Bidang Pengembangan Usaha',
+      'foto' => asset('images/idtc/foto12.jpg'),
+      'ringkasan' => 'Inisiatif pendampingan pasca-pelatihan bagi para alumni yang ingin merintis usaha mandiri dengan dukungan pembinaan mentor dan akses permodalan.',
+      'isi' => [
+        'SLEMAN — Tidak hanya berorientasi pada penempatan kerja formal di perusahaan, DPC HILLSI Sleman juga berkomitmen menumbuhkan wirausahawan baru melalui program inkubasi wirausaha mandiri.',
+        'Program ini menyasar alumni dari kejuruan teknik, otomotif, tata boga, salon kecantikan, dan desain kreatif yang memiliki tekad membuka usaha jasa sendiri di lingkungan tempat tinggalnya.',
+        'Selain mentoring bisnis dan manajemen permodalan sederhana, peserta juga diperkenalkan dengan skema bantuan pembiayaan perbankan dan penerbitan nomor induk berusaha resmi (NIB).',
+      ],
+    ],
+    [
+      'id' => 10,
+      'ikon' => '🏭',
+      'warna' => '#4f46e5',
+      'judul' => 'Kunjungan Studi Lapangan Industri Manufaktur Modern di Kawasan Industri',
+      'kategori' => 'Studi Lapangan',
+      'tanggal' => '28 September 2026',
+      'penulis' => 'Tim Pembina Vokasi',
+      'foto' => asset('images/idtc/foto14.jpg'),
+      'ringkasan' => 'Perwakilan instruktur dan siswa berprestasi berkesempatan mengamati langsung alur produksi presisi tinggi dan budaya kerja perusahaan manufaktur terkemuka.',
+      'isi' => [
+        'SLEMAN — Untuk memperkaya wawasan lapangan, rombongan instruktur dan siswa pilihan dari LPK anggota HILLSI Sleman melakukan company visit ke fasilitas pabrik manufaktur modern.',
+        'Kunjungan ini memberikan gambaran riil mengenai standarisasi otomatisasi mesin industri, manajemen lini perakitan, serta implementasi ketat kedisiplinan kerja 5R di lantai pabrik.',
+        'Pengalaman langsung ini sangat berharga untuk diselaraskan ke dalam materi praktikum di bengkel latih LPK agar suasana belajar semakin mendekati atmosfer kerja yang sesungguhnya.',
+      ],
+    ],
+    [
+      'id' => 11,
+      'ikon' => '🌐',
+      'warna' => '#0891b2',
+      'judul' => 'Seminar Standardisasi Kurikulum Pelatihan Bahasa Asing dan Karir Global',
+      'kategori' => 'Karir Luar Negeri',
+      'tanggal' => '21 September 2026',
+      'penulis' => 'Bidang Hubungan Luar Negeri',
+      'foto' => asset('images/idtc/foto15.jpg'),
+      'ringkasan' => 'Mengupas peluang penempatan tenaga kerja terampil di Jepang, Korea, dan Jerman melalui penguatan sertifikasi kompetensi bahasa dan etos kerja profesional.',
+      'isi' => [
+        'SLEMAN — Tingginya permintaan tenaga kerja berketerampilan khusus (specified skilled worker) di luar negeri menjadi peluang emas bagi generasi muda di Kabupaten Sleman.',
+        'DPC HILLSI Sleman menghadirkan para konsultan penempatan tenaga kerja dan pakar bahasa dalam seminar karir internasional. Topik mencakup standar kelulusan JLPT/TOPIK, uji keterampilan kejuruan, hingga penyesuaian budaya kerja di negara tujuan.',
+        'DPC HILLSI siap menjamin LPK bidang bahasa dan magang luar negeri di Sleman mematuhi seluruh regulasi ketenagakerjaan resmi dan memberikan perlindungan maksimal bagi calon tenaga kerja.',
+      ],
+    ],
+    [
+      'id' => 12,
+      'ikon' => '🏆',
+      'warna' => '#9333ea',
+      'judul' => 'Temu Mitra Kerja Tahunan DPC HILLSI Sleman: Apresiasi Mitra Industri Terbaik',
+      'kategori' => 'Mitra & Rekanan',
+      'tanggal' => '15 September 2026',
+      'penulis' => 'Sekretariat DPC HILLSI',
+      'foto' => asset('images/idtc/foto16.jpg'),
+      'ringkasan' => 'Malam penganugerahan penghargaan kepada puluhan perusahaan dan industri mitra atas kontribusi aktif dalam program magang dan penyerapan kerja alumni LPK.',
+      'isi' => [
+        'SLEMAN — Hubungan harmonis antara dunia pendidikan non-formal dan dunia usaha dipererat melalui agenda Temu Mitra Kerja Tahunan yang diselenggarakan oleh DPC HILLSI Sleman.',
+        'Dalam acara ini, DPC memberikan plakat apresiasi kepada perusahaan-perusahaan yang dinilai paling konsisten membuka pintu magang berkualitas dan menyerap lulusan LPK Sleman dalam jumlah signifikan.',
+        'Acara diakhiri dengan penandatanganan nota kesepahaman (MoU) baru untuk memperluas sektor kejuruan yang dikerjasamakan pada tahun mendatang.',
+      ],
+    ],
   ];
 @endphp
 
-<section id="kegiatan">
+<section id="kegiatan" class="alt">
   <div class="wrap">
-    <div class="eye rv">Artikel Kegiatan</div>
+    <div class="eye rv">Berita & Kegiatan</div>
     <h2 class="rv">Berita & Kegiatan DPC Sleman</h2>
     <p class="sub rv" style="max-width:none">Dokumentasi koordinasi kelembagaan, pelatihan vokasi, sertifikasi kompetensi, dan sinergi kemitraan DPC HILLSI Kabupaten Sleman.</p>
 
-    <!-- Kontainer Daftar Artikel (2 Kartu persis seperti LPK bersebelahan) -->
-    <div id="kegiatanCardList" class="kegiatan-cards-grid"></div>
+    <!-- Kontainer Daftar Artikel Berita (Grid Card Bersebelahan) -->
+    <div id="kegiatanCardList" class="news-grid"></div>
 
-    <!-- Navigasi Halaman Artikel (Next / Prev) -->
-    <div id="kegiatanPagination" class="pagination-wrap"></div>
-    <div id="kegiatanCountText" class="rv" style="text-align:center;margin-top:14px;font-size:13.5px;color:var(--muted);font-weight:600;"></div>
+    <!-- Navigasi Halaman Artikel: Previous | 1 | 2 | 3 | 4 | 5 | 6 | Next -->
+    <div id="kegiatanPagination" class="news-pagination"></div>
+    <div id="kegiatanCountText" class="rv" style="text-align:center;margin-top:16px;font-size:13.5px;color:var(--muted);font-weight:600;"></div>
   </div>
 </section>
 
@@ -356,28 +452,40 @@ function renderArticles() {
 
   var h = "";
   items.forEach(function(a) {
-    h += '<div class="lc rv in" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca artikel lengkap" style="display:flex;flex-direction:column;">' +
-           '<div class="kegiatan-cv">' +
+    h += '<article class="news-card rv in">' +
+           '<div class="news-thumb" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca selengkapnya">' +
              '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" loading="lazy">' +
+             '<span class="news-badge">' + esc(a.kategori) + '</span>' +
            '</div>' +
-           '<div class="b" style="padding:16px 18px 20px;flex:1;display:flex;align-items:center;">' +
-             '<h4 style="margin:0;font-size:15.5px;line-height:1.45;font-weight:700;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">' + esc(a.judul) + '</h4>' +
+           '<div class="news-content">' +
+             '<div class="news-meta">' +
+               '<span class="news-date">📅 ' + esc(a.tanggal) + '</span>' +
+               '<span class="news-author">✍️ ' + esc(a.penulis) + '</span>' +
+             '</div>' +
+             '<h3 class="news-title" onclick="openArticle(' + a.id + ')" title="' + esc(a.judul) + '">' + esc(a.judul) + '</h3>' +
+             '<p class="news-desc">' + esc(a.ringkasan) + '</p>' +
+             '<div class="news-footer">' +
+               '<button type="button" class="news-btn-read" onclick="openArticle(' + a.id + ')" title="Buka artikel ' + esc(a.judul) + '">' +
+                 '<span>Baca Selengkapnya</span>' +
+                 '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' +
+               '</button>' +
+             '</div>' +
            '</div>' +
-         '</div>';
+         '</article>';
   });
 
   if ($("kegiatanCardList")) {
     $("kegiatanCardList").innerHTML = h;
   }
 
-  // Navigasi Pagination Artikel (Prev / 1 / 2 / 3 / Next)
+  // Format Pagination: Previous | 1 | 2 | 3 | 4 | 5 | 6 | Next
   var pagiHtml = "";
   if (totalPages > 1) {
-    pagiHtml += '<button type="button" class="pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE - 1) + ')" ' + (ART_PAGE === 1 ? 'disabled' : '') + ' aria-label="Halaman Sebelumnya">&laquo; Sebelumnya</button>';
+    pagiHtml += '<button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE - 1) + ')" ' + (ART_PAGE === 1 ? 'disabled' : '') + ' aria-label="Previous">Previous</button>';
     for (var p = 1; p <= totalPages; p++) {
-      pagiHtml += '<button type="button" class="pagi-btn ' + (p === ART_PAGE ? 'active' : '') + '" onclick="kegiatanGoPage(' + p + ')">' + p + '</button>';
+      pagiHtml += '<button type="button" class="news-pagi-btn ' + (p === ART_PAGE ? 'active' : '') + '" onclick="kegiatanGoPage(' + p + ')" aria-label="Halaman ' + p + '">' + p + '</button>';
     }
-    pagiHtml += '<button type="button" class="pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE + 1) + ')" ' + (ART_PAGE === totalPages ? 'disabled' : '') + ' aria-label="Halaman Berikutnya">Berikutnya &raquo;</button>';
+    pagiHtml += '<button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE + 1) + ')" ' + (ART_PAGE === totalPages ? 'disabled' : '') + ' aria-label="Next">Next</button>';
   }
 
   if ($("kegiatanPagination")) {
@@ -387,7 +495,7 @@ function renderArticles() {
   if ($("kegiatanCountText")) {
     var from = total > 0 ? (start + 1) : 0;
     var to = Math.min(start + ART_PER_PAGE, total);
-    $("kegiatanCountText").innerHTML = 'Menampilkan artikel ' + from + '-' + to + ' dari ' + total + ' artikel · Halaman ' + ART_PAGE + ' dari ' + totalPages;
+    $("kegiatanCountText").innerHTML = 'Menampilkan artikel ' + from + ' - ' + to + ' dari ' + total + ' artikel · Halaman ' + ART_PAGE + ' dari ' + totalPages;
   }
 }
 
