@@ -53,7 +53,7 @@
         </div>
         <div class="stat-info">
             <h3>{{ $totalArticles }}</h3>
-            <p>Berita & Kegiatan ({{ $activeArticles }} Aktif)</p>
+            <p>Total Artikel ({{ $activeArticles }} Aktif)</p>
         </div>
     </div>
 </div>
@@ -165,19 +165,19 @@
 
 </div>
 
-<!-- Bagian Berita & Kegiatan Terbaru -->
+<!-- Bagian Artikel Terbaru -->
 <div class="card-box" style="margin-top: 24px;">
     <div class="card-header">
         <div>
-            <h2>📰 Berita & Kegiatan Terbaru</h2>
+            <h2>📰 Artikel Terbaru</h2>
             <p>Daftar publikasi dan dokumentasi kegiatan DPC HILLSI Sleman</p>
         </div>
         <div style="display: flex; gap: 8px;">
             <a href="{{ route('admin.articles.index') }}" class="btn btn-secondary btn-sm">
-                Kelola Semua Berita &rarr;
+                Kelola Semua Artikel &rarr;
             </a>
             <a href="{{ route('admin.articles.create') }}" class="btn btn-primary btn-sm">
-                + Tambah Berita Baru
+                + Tambah Artikel Baru
             </a>
         </div>
     </div>
@@ -187,7 +187,7 @@
             <thead>
                 <tr>
                     <th style="width: 50px; text-align: center;">#</th>
-                    <th>Judul Berita & Kegiatan</th>
+                    <th>Judul Artikel</th>
                     <th>Kategori</th>
                     <th>Tanggal</th>
                     <th style="text-align: center;">Status</th>
