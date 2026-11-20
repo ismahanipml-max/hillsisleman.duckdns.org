@@ -89,6 +89,7 @@
     [
       'id' => 0,
       'ikon' => '🏛️',
+      'warna' => '#0b5d63',
       'judul' => 'Rapat Koordinasi DPC HILLSI Sleman Perkuat Standardisasi dan Mutu Vokasi 2026',
       'kategori' => 'Koordinasi DPC',
       'tanggal' => '18 November 2026',
@@ -104,6 +105,7 @@
     [
       'id' => 1,
       'ikon' => '💻',
+      'warna' => '#c2410c',
       'judul' => 'Pelatihan Berbasis Kompetensi Teknologi Terapan Sukses Diikuti Puluhan Instruktur',
       'kategori' => 'Pelatihan Vokasi',
       'tanggal' => '14 November 2026',
@@ -119,6 +121,7 @@
     [
       'id' => 2,
       'ikon' => '📜',
+      'warna' => '#1d4ed8',
       'judul' => 'Asesmen dan Uji Kompetensi Nasional BNSP Resmi Digelar Serentak di Sleman',
       'kategori' => 'Sertifikasi Resmi',
       'tanggal' => '10 November 2026',
@@ -134,6 +137,7 @@
     [
       'id' => 3,
       'ikon' => '🤝',
+      'warna' => '#047857',
       'judul' => "Sinkronisasi Kurikulum 'Link and Match' Pererat Sinergi LPK dengan Mitra Industri",
       'kategori' => 'Kemitraan Industri',
       'tanggal' => '5 November 2026',
@@ -149,6 +153,7 @@
     [
       'id' => 4,
       'ikon' => '🛡️',
+      'warna' => '#b45309',
       'judul' => 'Penerapan SOP Keselamatan dan Kesehatan Kerja (K3) Jadi Standar Baku Seluruh LPK',
       'kategori' => 'Praktik & K3',
       'tanggal' => '28 Oktober 2026',
@@ -164,6 +169,7 @@
     [
       'id' => 5,
       'ikon' => '🏢',
+      'warna' => '#7e22ce',
       'judul' => 'Kolaborasi DPC HILLSI dan Disnaker Sleman Sukses Gelar Bursa Pelatihan Vokasi',
       'kategori' => 'Sinergi Pemerintah',
       'tanggal' => '22 Oktober 2026',
@@ -185,8 +191,8 @@
     <h2 class="rv">Berita & Kegiatan DPC Sleman</h2>
     <p class="sub rv" style="max-width:none">Dokumentasi koordinasi kelembagaan, pelatihan vokasi, sertifikasi kompetensi, dan sinergi kemitraan DPC HILLSI Kabupaten Sleman.</p>
 
-    <!-- Kontainer Daftar Artikel (2 Kartu persis seperti Tentang Kami) -->
-    <div id="kegiatanCardList" class="grid2"></div>
+    <!-- Kontainer Daftar Artikel (2 Kartu persis seperti LPK bersebelahan) -->
+    <div id="kegiatanCardList" class="kegiatan-cards-grid"></div>
 
     <!-- Navigasi Halaman Artikel (Next / Prev) -->
     <div id="kegiatanPagination" class="pagination-wrap"></div>
@@ -351,13 +357,13 @@ function renderArticles() {
   var h = "";
   items.forEach(function(a) {
     h += '<div class="lc rv in" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca artikel lengkap">' +
-           '<div class="kegiatan-cv">' +
-             '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" loading="lazy">' +
+           '<div class="cv" style="background:linear-gradient(135deg,' + a.warna + ',#000a)">' +
+             '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" style="max-height:76px;max-width:82%;object-fit:cover;border-radius:10px;position:relative;z-index:1;filter:drop-shadow(0 3px 8px rgba(0,0,0,.5))">' +
            '</div>' +
            '<div class="b">' +
              '<h4>' + esc(a.judul) + '</h4>' +
              '<span class="pill">' + esc(a.kategori) + '</span>' +
-             '<p style="font-size:13px;color:var(--muted);margin:8px 0 0;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">📝 ' + esc(a.ringkasan) + '</p>' +
+             '<p style="font-size:12.5px;color:var(--muted);margin:8px 0 0;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">🛠️ ' + esc(a.ringkasan) + '</p>' +
            '</div>' +
          '</div>';
   });
