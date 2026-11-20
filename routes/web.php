@@ -32,6 +32,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::post('lpks/{lpk}/toggle-active', [LpkController::class, 'toggleActive'])->name('lpks.toggle-active');
     Route::delete('lpks/{lpk}/gallery/{gallery}', [LpkController::class, 'destroyGallery'])->name('lpks.gallery.destroy');
 
+    Route::post('articles/fetch-url', [ArticleController::class, 'fetchUrl'])->name('articles.fetch-url');
     Route::resource('articles', ArticleController::class);
     Route::post('articles/{article}/toggle-active', [ArticleController::class, 'toggleActive'])->name('articles.toggle-active');
 
