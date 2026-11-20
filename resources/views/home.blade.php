@@ -315,7 +315,7 @@
 
 <section id="kegiatan" class="alt">
   <div class="wrap">
-    <h2 class="rv" style="font-size:clamp(26px,3.5vw,34px);font-weight:800;margin:0 0 8px;color:var(--text);">Kegiatan</h2>
+    <h2 class="rv" style="font-size:clamp(26px,3.5vw,34px);font-weight:800;margin:0 0 8px;color:var(--text);">Artikel Kegiatan</h2>
     <p class="sub rv" style="color:var(--muted);margin:0 0 32px;font-size:15px;max-width:none;">Kabar dan dokumentasi kegiatan terbaru dari DPC HILLSI Sleman dan lembaga pelatihan anggota.</p>
 
     <!-- Kontainer Daftar Artikel Berita (Grid Card Bersebelahan) -->
@@ -362,7 +362,7 @@
         <span>Kembali ke Kegiatan</span>
       </button>
       <div class="art-modal-top-title" style="font-size:13.5px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:8px;">
-        <span>📰 Kegiatan DPC HILLSI Sleman</span>
+        <span>📰 Artikel Kegiatan DPC HILLSI Sleman</span>
       </div>
       <button type="button" class="art-modal-close-icon" onclick="closeArtModal()" aria-label="Tutup" style="background:rgba(255,255,255,0.08);border:1px solid var(--line);color:var(--text);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;line-height:1;transition:all .2s ease;">&times;</button>
     </div>
