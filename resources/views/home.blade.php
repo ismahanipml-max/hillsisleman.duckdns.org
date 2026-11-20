@@ -341,9 +341,9 @@
       @endforeach
     </div>
 
-    <!-- Navigasi Halaman Artikel: Previous | 1-2 | Next -->
+    <!-- Navigasi Halaman Artikel: Sebelumnya | 1-2 | Next -->
     <div id="kegiatanPagination" class="news-pagination">
-      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(1)" disabled aria-label="Previous">Previous</button>
+      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(1)" disabled aria-label="Sebelumnya">Sebelumnya</button>
       <button type="button" class="news-pagi-btn active" onclick="kegiatanGoPage(1)" aria-label="Halaman 1">1</button>
       <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(2)" aria-label="Halaman 2">2</button>
       <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(2)" aria-label="Next">Next</button>
@@ -562,7 +562,7 @@ function renderArticles() {
     var startPage = Math.floor((ART_PAGE - 1) / 2) * 2 + 1;
     var endPage = Math.min(startPage + 1, totalPages);
 
-    pagiHtml += '<button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE - 1) + ')" ' + (ART_PAGE === 1 ? 'disabled' : '') + ' aria-label="Previous">Previous</button>';
+    pagiHtml += '<button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE - 1) + ')" ' + (ART_PAGE === 1 ? 'disabled' : '') + ' aria-label="Sebelumnya">Sebelumnya</button>';
     for (var p = startPage; p <= endPage; p++) {
       pagiHtml += '<button type="button" class="news-pagi-btn ' + (p === ART_PAGE ? 'active' : '') + '" onclick="kegiatanGoPage(' + p + ')" aria-label="Halaman ' + p + '">' + p + '</button>';
     }
