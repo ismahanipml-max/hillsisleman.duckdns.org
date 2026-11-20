@@ -85,81 +85,134 @@
 </section>
 
 @php
-  $kegiatanList = [
+  $kegiatanArticles = [
     [
-      'judul' => 'Rapat Koordinasi & Pembinaan Lembaga Pelatihan Kerja se-Sleman',
+      'id' => 0,
+      'judul' => 'Rapat Koordinasi DPC HILLSI Sleman Perkuat Standardisasi dan Mutu Vokasi 2026',
       'kategori' => 'Koordinasi DPC',
-      'waktu' => 'Agenda Rutin',
+      'tanggal' => '18 November 2026',
+      'penulis' => 'Humas DPC HILLSI Sleman',
       'foto' => asset('images/idtc/foto1.jpg'),
-      'deskripsi' => 'Pertemuan berkala pengurus DPC HILLSI Sleman bersama para pimpinan LPK untuk penguatan tata kelola lembaga dan standardisasi mutu pelatihan kerja.',
+      'ringkasan' => 'DPC HILLSI Kabupaten Sleman menyelenggarakan rapat koordinasi bersama seluruh pimpinan Lembaga Pelatihan Kerja (LPK) guna menyamakan visi peningkatan mutu kompetensi lulusan vokasi menghadapi dinamika industri modern.',
+      'isi' => [
+        'SLEMAN — Dewan Pimpinan Cabang Himpunan Lembaga Pelatihan Seluruh Indonesia (DPC HILLSI) Kabupaten Sleman menggelar rapat koordinasi dan pembinaan kelembagaan bersama puluhan pimpinan LPK di wilayah Sleman. Agenda utama pertemuan ini berfokus pada evaluasi kurikulum pelatihan serta penguatan akreditasi kelembagaan menuju standar nasional.',
+        'Ketua DPC HILLSI Sleman menegaskan bahwa standarisasi mutu adalah kunci utama agar alumni LPK di Kabupaten Sleman mampu bersaing tidak hanya di tingkat regional namun juga di kancah nasional maupun internasional. Selain itu, ditekankan pentingnya transparansi informasi program dan penguatan tata kelola administrasi masing-masing lembaga.',
+        'Melalui koordinasi ini, seluruh LPK anggota sepakat untuk saling bersinergi dalam pertukaran modul ajar, peningkatan kapasitas instruktur, serta penyusunan kalender pelatihan bersama yang dapat diakses dengan mudah oleh masyarakat luas.',
+      ],
     ],
     [
-      'judul' => 'Pelatihan Berbasis Kompetensi (PBK) & Penguasaan Teknologi Terapan',
+      'id' => 1,
+      'judul' => 'Pelatihan Berbasis Kompetensi Teknologi Terapan Sukses Diikuti Puluhan Instruktur',
       'kategori' => 'Pelatihan Vokasi',
-      'waktu' => 'Program Berjalan',
+      'tanggal' => '14 November 2026',
+      'penulis' => 'Divisi Vokasi & Pelatihan',
       'foto' => asset('images/idtc/foto13.jpg'),
-      'deskripsi' => 'Praktik langsung pengoperasian teknologi dan metodologi pelatihan modern guna mencetak instruktur serta tenaga kerja yang kompeten dan siap pakai.',
+      'ringkasan' => 'Sebanyak 45 instruktur pelatihan kerja se-Kabupaten Sleman mengikuti program upgrading keterampilan teknologi terapan dan pengoperasian peralatan kerja modern berbasis standar industri.',
+      'isi' => [
+        'SLEMAN — Perkembangan teknologi di berbagai sektor menuntut adanya pembaruan kompetensi para tenaga pendidik dan instruktur pelatihan. Menjawab tantangan tersebut, DPC HILLSI Sleman menyelenggarakan workshop intensif Pelatihan Berbasis Kompetensi (PBK) yang berlangsung selama tiga hari penuh.',
+        'Peserta pelatihan diberikan materi teori komprehensif yang dilanjutkan dengan praktik langsung pengoperasian teknologi terapan, mulai dari teknik digitalisasi operasional, simulasi kerja presisi, hingga metodologi evaluasi performa peserta didik di bengkel kerja.',
+        'Diharapkan melalui kegiatan ini, para instruktur mampu menularkan ilmu dan etos kerja modern kepada para siswa di masing-masing LPK, sehingga melahirkan angkatan kerja yang terampil, produktif, dan adaptif terhadap transformasi digital.',
+      ],
     ],
     [
-      'judul' => 'Uji Kompetensi & Asesmen Sertifikasi Standar BNSP',
-      'kategori' => 'Sertifikasi Nasional',
-      'waktu' => 'Sertifikasi Resmi',
+      'id' => 2,
+      'judul' => 'Asesmen dan Uji Kompetensi Nasional BNSP Resmi Digelar Serentak di Sleman',
+      'kategori' => 'Sertifikasi Resmi',
+      'tanggal' => '10 November 2026',
+      'penulis' => 'LSP & Asesmen Kompetensi',
       'foto' => asset('images/idtc/foto7.jpg'),
-      'deskripsi' => 'Penyelenggaraan asesmen kompetensi resmi untuk memastikan setiap lulusan memiliki sertifikat keahlian yang diakui secara nasional oleh BNSP.',
+      'ringkasan' => 'Penyelenggaraan uji kompetensi resmi berlisensi BNSP diikuti oleh ratusan peserta dari berbagai bidang kejuruan untuk menjamin pengakuan profesional sertifikasi kerja.',
+      'isi' => [
+        'SLEMAN — Guna memastikan legalitas keahlian dan daya saing tenaga kerja vokasi, DPC HILLSI Sleman memfasilitasi pelaksanaan uji kompetensi kerja nasional bekerja sama dengan Lembaga Sertifikasi Profesi (LSP) berlisensi Badan Nasional Sertifikasi Profesi (BNSP).',
+        'Uji kompetensi ini mencakup berbagai skema kejuruan mulai dari bidang teknologi komputer informasi, teknik mekanik, perhotelan, kuliner, hingga bahasa asing. Asesor profesional diturunkan langsung untuk menguji portofolio, pengetahuan teknis, dan demonstrasi keahlian praktis para asesi.',
+        'Sertifikat kompetensi yang diterbitkan berstandar nasional dan menjadi bukti pengakuan profesional yang berharga bagi para lulusan untuk melamar pekerjaan di korporasi swasta, industri BUMN, maupun bekal berkarier di mancanegara.',
+      ],
     ],
     [
-      'judul' => 'Workshop Sinkronisasi Kurikulum Vokasi dengan Dunia Industri (Link & Match)',
+      'id' => 3,
+      'judul' => "Sinkronisasi Kurikulum 'Link and Match' Pererat Sinergi LPK dengan Mitra Industri",
       'kategori' => 'Kemitraan Industri',
-      'waktu' => 'Kolaborasi Industri',
+      'tanggal' => '5 November 2026',
+      'penulis' => 'Bidang Kerjasama Industri',
       'foto' => asset('images/idtc/foto2.jpg'),
-      'deskripsi' => 'Penyelarasan materi ajar LPK dengan standar kebutuhan dunia kerja dan industri (DUDI) untuk mempercepat penyerapan lulusan pelatihan.',
+      'ringkasan' => 'HILLSI Sleman bersama puluhan perwakilan perusahaan menggelar forum dialog guna memetakan kebutuhan riil dunia usaha dan menyelaraskan silabus pelatihan kerja.',
+      'isi' => [
+        'SLEMAN — Kesenjangan antara keterampilan yang diajarkan di lembaga pelatihan dengan kebutuhan riil dunia industri (job mismatch) terus diminimalisir oleh DPC HILLSI Sleman. Dalam forum sarasehan industri, pimpinan HRD dan perwakilan asosiasi usaha diundang untuk membedah silabus pelatihan kerja.',
+        'Hasil dari forum ini merumuskan kurikulum berbasis kebutuhan nyata dunia industri (Link and Match). Pihak industri juga menyatakan komitmennya untuk membuka peluang magang kerja bersertifikat serta rekrutmen prioritas bagi para lulusan LPK di bawah naungan HILLSI Sleman.',
+        'Langkah kolaboratif ini menjadi jembatan nyata bagi para pencari kerja agar tidak lagi kesulitan mencari jalur penyerapan kerja setelah menyelesaikan masa pelatihannya.',
+      ],
     ],
     [
-      'judul' => 'Simulasi Lapangan & Standar Keselamatan Kerja (K3) Vokasi',
+      'id' => 4,
+      'judul' => 'Penerapan SOP Keselamatan dan Kesehatan Kerja (K3) Jadi Standar Baku Seluruh LPK',
       'kategori' => 'Praktik & K3',
-      'waktu' => 'Praktik Lapangan',
+      'tanggal' => '28 Oktober 2026',
+      'penulis' => 'Divisi K3 & Operasional',
       'foto' => asset('images/idtc/foto11.jpg'),
-      'deskripsi' => 'Pembekalan prosedur keselamatan penerbangan, pengoperasian alat industri, dan penanganan risiko kerja di lapangan secara profesional.',
+      'ringkasan' => 'Sosialisasi dan simulasi tanggap darurat keselamatan kerja di lingkungan bengkel latihan dicanangkan untuk menciptakan lingkungan belajar yang aman dan terstandar.',
+      'isi' => [
+        'SLEMAN — Keselamatan dan Kesehatan Kerja (K3) merupakan fondasi utama dalam setiap kegiatan vokasi dan perbengkelan. DPC HILLSI Sleman mengadakan sesi pembekalan dan simulasi K3 bagi penanggung jawab bengkel latihan di seluruh LPK binaan.',
+        'Materi mencakup prosedur penggunaan alat pelindung diri (APD), pertolongan pertama pada kecelakaan kerja (P3K), pencegahan bahaya kebakaran, hingga manajemen penataan alat workshop berbasis 5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke).',
+        'Dengan budaya K3 yang tertanam sejak masa pelatihan, lulusan LPK Sleman diharapkan memiliki disiplin tinggi dan kesadaran keselamatan yang matang saat memasuki lingkungan pabrik maupun proyek komersial.',
+      ],
     ],
     [
-      'judul' => 'Sinergi Pembinaan Tenaga Kerja Bersama Dinas Tenaga Kerja Kabupaten Sleman',
+      'id' => 5,
+      'judul' => 'Kolaborasi DPC HILLSI dan Disnaker Sleman Sukses Gelar Bursa Pelatihan Vokasi',
       'kategori' => 'Sinergi Pemerintah',
-      'waktu' => 'Forum Bersama',
+      'tanggal' => '22 Oktober 2026',
+      'penulis' => 'Humas DPC HILLSI Sleman',
       'foto' => asset('images/idtc/foto10.jpg'),
-      'deskripsi' => 'Kerjasama strategis antara HILLSI Sleman dan Disnaker dalam rangka pelatihan vokasi masyarakat serta pengurangan angka pengangguran daerah.',
+      'ringkasan' => 'Expo pelatihan dan informasi bursa kerja terpadu berhasil menarik antusiasme ribuan pemuda Sleman dalam mencari program pelatihan kejuruan yang tepat sasaran.',
+      'isi' => [
+        'SLEMAN — Kolaborasi erat antara Dinas Tenaga Kerja Kabupaten Sleman dan DPC HILLSI kembali membuahkan hasil positif melalui penyelenggaraan Bursa Pelatihan Vokasi Daerah. Acara ini menjadi wadah etalase program bagi puluhan LPK resmi di Kabupaten Sleman.',
+        'Masyarakat dan pencari kerja dapat berkonsultasi langsung mengenai program beasiswa pelatihan gratis, fasilitas laboratorium kejuruan, hingga jalur penyaluran kerja yang disediakan masing-masing lembaga.',
+        'Kepala Dinas Tenaga Kerja Sleman mengapresiasi peran aktif DPC HILLSI sebagai mitra strategis pemerintah daerah dalam menekan angka pengangguran terbuka dan mendongkrak indeks kualitas SDM di Kabupaten Sleman.',
+      ],
     ],
   ];
 @endphp
 
 <section id="kegiatan">
   <div class="wrap">
-    <div class="eye rv">Kegiatan</div>
-    <h2 class="rv">Program & Aktivitas DPC HILLSI Sleman</h2>
-    <p class="sub rv" style="max-width:none">Dokumentasi koordinasi kelembagaan, pelatihan vokasi, sertifikasi kompetensi, dan sinergi kemitraan bersama instansi pemerintah serta dunia industri.</p>
+    <div class="eye rv">Artikel Kegiatan</div>
+    <h2 class="rv">Berita & Dokumentasi Kegiatan</h2>
+    <p class="sub rv" style="max-width:none">Kumpulan artikel, liputan program kerja, pelatihan vokasi, serta dokumentasi kegiatan resmi DPC HILLSI Kabupaten Sleman.</p>
 
-    <div class="kegiatan-grid">
-      @foreach($kegiatanList as $idx => $k)
-        <div class="kegiatan-card rv">
-          <div class="kegiatan-thumb" onclick="openHomeLb({{ $idx }})" title="Klik untuk melihat foto dokumentasi">
-            <img src="{{ $k['foto'] }}" alt="{{ $k['judul'] }}" loading="lazy">
-            <div class="kegiatan-zoom">🔍</div>
-          </div>
-          <div class="kegiatan-body">
-            <div class="kegiatan-meta">
-              <span class="kegiatan-tag">{{ $k['kategori'] }}</span>
-              <span class="kegiatan-time">{{ $k['waktu'] }}</span>
-            </div>
-            <h3>{{ $k['judul'] }}</h3>
-            <p>{{ $k['deskripsi'] }}</p>
-            <div class="kegiatan-foot">
-              <span>📍 Kabupaten Sleman, D.I. Yogyakarta</span>
-            </div>
-          </div>
-        </div>
-      @endforeach
-    </div>
+    <!-- Kontainer Daftar Artikel (2 Artikel per Halaman) -->
+    <div id="kegiatanArticleList" class="kegiatan-grid-2"></div>
+
+    <!-- Navigasi Halaman Artikel (Next / Prev) -->
+    <div id="kegiatanPagination" class="pagination-wrap"></div>
+    <div id="kegiatanCountText" class="rv" style="text-align:center;margin-top:14px;font-size:13.5px;color:var(--muted);font-weight:600;"></div>
   </div>
 </section>
+
+<!-- Modal Pop-up Baca Artikel Lengkap -->
+<div id="artModal" class="art-modal" onclick="closeArtModal(event)">
+  <div class="art-modal-box">
+    <button type="button" class="art-modal-close" onclick="closeArtModal()" aria-label="Tutup">&times;</button>
+    <div class="art-modal-header">
+      <img id="artModalImg" src="" alt="Foto Kegiatan">
+    </div>
+    <div class="art-modal-content">
+      <div class="art-meta">
+        <span id="artModalTag" class="art-tag"></span>
+        <span id="artModalDate" class="art-date"></span>
+      </div>
+      <h2 id="artModalTitle"></h2>
+      <div class="art-modal-author">
+        <span>✍️ Ditulis oleh: <b id="artModalAuthor"></b></span>
+        <span>•</span>
+        <span>📍 DPC HILLSI Kabupaten Sleman</span>
+      </div>
+      <div id="artModalBody" class="art-modal-body"></div>
+    </div>
+    <div class="art-modal-footer">
+      <button type="button" class="btn s" onclick="closeArtModal()">Tutup Artikel</button>
+    </div>
+  </div>
+</div>
 
 <section id="kontak">
   <div class="wrap">
@@ -276,11 +329,113 @@
 @push('scripts')
 <script>
 var L = {!! json_encode($lpksJson) !!};
-window._kegiatanPhotos = @json(array_column($kegiatanList, 'foto'));
-function openHomeLb(idx) {
-  window._galleryList = window._kegiatanPhotos;
-  openLb(idx);
+var ARTICLES = @json($kegiatanArticles);
+var ART_PAGE = 1;
+var ART_PER_PAGE = 2;
+
+function renderArticles() {
+  var total = ARTICLES.length;
+  var totalPages = Math.ceil(total / ART_PER_PAGE) || 1;
+  if (ART_PAGE > totalPages) ART_PAGE = totalPages;
+  if (ART_PAGE < 1) ART_PAGE = 1;
+
+  var start = (ART_PAGE - 1) * ART_PER_PAGE;
+  var items = ARTICLES.slice(start, start + ART_PER_PAGE);
+
+  var h = "";
+  items.forEach(function(a) {
+    h += '<article class="art-card rv in">' +
+           '<div class="art-thumb" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca artikel">' +
+             '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" loading="lazy">' +
+             '<div class="art-overlay">📖 Baca Artikel Lengkap</div>' +
+           '</div>' +
+           '<div class="art-body">' +
+             '<div class="art-meta">' +
+               '<span class="art-tag">' + esc(a.kategori) + '</span>' +
+               '<span class="art-date">📅 ' + esc(a.tanggal) + '</span>' +
+             '</div>' +
+             '<h3 class="art-title" onclick="openArticle(' + a.id + ')">' + esc(a.judul) + '</h3>' +
+             '<p class="art-excerpt">' + esc(a.ringkasan) + '</p>' +
+             '<div class="art-foot">' +
+               '<div class="art-author">✍️ <span>' + esc(a.penulis) + '</span></div>' +
+               '<button type="button" class="art-read-btn" onclick="openArticle(' + a.id + ')">Baca Selengkapnya →</button>' +
+             '</div>' +
+           '</div>' +
+         '</article>';
+  });
+
+  if ($("kegiatanArticleList")) {
+    $("kegiatanArticleList").innerHTML = h;
+  }
+
+  // Navigasi Pagination Artikel (Prev / 1 / 2 / 3 / Next)
+  var pagiHtml = "";
+  if (totalPages > 1) {
+    pagiHtml += '<button type="button" class="pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE - 1) + ')" ' + (ART_PAGE === 1 ? 'disabled' : '') + ' aria-label="Halaman Sebelumnya">&laquo; Sebelumnya</button>';
+    for (var p = 1; p <= totalPages; p++) {
+      pagiHtml += '<button type="button" class="pagi-btn ' + (p === ART_PAGE ? 'active' : '') + '" onclick="kegiatanGoPage(' + p + ')">' + p + '</button>';
+    }
+    pagiHtml += '<button type="button" class="pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE + 1) + ')" ' + (ART_PAGE === totalPages ? 'disabled' : '') + ' aria-label="Halaman Berikutnya">Berikutnya &raquo;</button>';
+  }
+
+  if ($("kegiatanPagination")) {
+    $("kegiatanPagination").innerHTML = pagiHtml;
+  }
+
+  if ($("kegiatanCountText")) {
+    var from = total > 0 ? (start + 1) : 0;
+    var to = Math.min(start + ART_PER_PAGE, total);
+    $("kegiatanCountText").innerHTML = 'Menampilkan artikel ' + from + '-' + to + ' dari ' + total + ' artikel · Halaman ' + ART_PAGE + ' dari ' + totalPages;
+  }
 }
+
+function kegiatanGoPage(p) {
+  var totalPages = Math.ceil(ARTICLES.length / ART_PER_PAGE);
+  if (p < 1 || p > totalPages) return;
+  ART_PAGE = p;
+  renderArticles();
+  var sec = $("kegiatan");
+  if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+}
+
+function openArticle(id) {
+  var art = ARTICLES.find(function(item) { return item.id === id; });
+  if (!art) return;
+  if ($("artModalImg")) {
+    $("artModalImg").src = art.foto;
+    $("artModalImg").alt = art.judul;
+  }
+  if ($("artModalTag")) $("artModalTag").textContent = art.kategori;
+  if ($("artModalDate")) $("artModalDate").textContent = '📅 ' + art.tanggal;
+  if ($("artModalTitle")) $("artModalTitle").textContent = art.judul;
+  if ($("artModalAuthor")) $("artModalAuthor").textContent = art.penulis;
+
+  if ($("artModalBody")) {
+    var bodyHtml = "";
+    art.isi.forEach(function(paragraph) {
+      bodyHtml += '<p>' + esc(paragraph) + '</p>';
+    });
+    $("artModalBody").innerHTML = bodyHtml;
+  }
+
+  var m = $("artModal");
+  if (m) m.classList.add("on");
+}
+
+function closeArtModal(e) {
+  if (e && e.target && e.target.closest(".art-modal-box") && !e.target.classList.contains("art-modal-close") && e.target.innerText !== "Tutup Artikel") {
+    return;
+  }
+  var m = $("artModal");
+  if (m) m.classList.remove("on");
+}
+
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    var m = $("artModal");
+    if (m && m.classList.contains("on")) closeArtModal();
+  }
+});
 
 var Q = "", CAT = "Semua";
 var PAGE = 1;
@@ -420,6 +575,7 @@ document.addEventListener("click", function(e) {
 
 document.addEventListener("DOMContentLoaded", function() {
   draw();
+  renderArticles();
 });
 </script>
 @endpush
