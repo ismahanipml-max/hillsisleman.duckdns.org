@@ -356,14 +356,12 @@ function renderArticles() {
 
   var h = "";
   items.forEach(function(a) {
-    h += '<div class="lc rv in" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca artikel lengkap">' +
+    h += '<div class="lc rv in" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca artikel lengkap" style="display:flex;flex-direction:column;">' +
            '<div class="kegiatan-cv">' +
              '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" loading="lazy">' +
            '</div>' +
-           '<div class="b">' +
-             '<h4>' + esc(a.judul) + '</h4>' +
-             '<span class="pill">' + esc(a.kategori) + '</span>' +
-             '<p style="font-size:12.5px;color:var(--muted);margin:8px 0 0;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">🛠️ ' + esc(a.ringkasan) + '</p>' +
+           '<div class="b" style="padding:16px 18px 20px;flex:1;display:flex;align-items:center;">' +
+             '<h4 style="margin:0;font-size:15.5px;line-height:1.45;font-weight:700;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">' + esc(a.judul) + '</h4>' +
            '</div>' +
          '</div>';
   });
