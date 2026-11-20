@@ -315,8 +315,8 @@
 
 <section id="kegiatan" class="alt">
   <div class="wrap">
-    <h2 class="rv" style="font-size:clamp(26px,3.5vw,34px);font-weight:800;margin:0 0 8px;color:var(--text);">Artikel</h2>
-    <p class="sub rv" style="color:var(--muted);margin:0 0 32px;font-size:15px;max-width:none;">Kabar dan artikel kegiatan terbaru dari DPC HILLSI Sleman dan lembaga pelatihan anggota.</p>
+    <h2 class="rv" style="font-size:clamp(26px,3.5vw,34px);font-weight:800;margin:0 0 8px;color:var(--text);">Kegiatan</h2>
+    <p class="sub rv" style="color:var(--muted);margin:0 0 32px;font-size:15px;max-width:none;">Kabar dan dokumentasi kegiatan terbaru dari DPC HILLSI Sleman dan lembaga pelatihan anggota.</p>
 
     <!-- Kontainer Daftar Artikel Berita (Grid Card Bersebelahan) -->
     <div id="kegiatanCardList" class="news-grid">
@@ -359,10 +359,10 @@
     <div class="art-modal-top-bar">
       <button type="button" class="btn s" onclick="closeArtModal()" style="display:inline-flex;align-items:center;gap:8px;font-size:13.5px;padding:8px 16px;border-radius:10px;font-weight:700;">
         <span>&larr;</span>
-        <span>Kembali ke Artikel</span>
+        <span>Kembali ke Kegiatan</span>
       </button>
       <div class="art-modal-top-title" style="font-size:13.5px;font-weight:700;color:var(--muted);display:flex;align-items:center;gap:8px;">
-        <span>📰 Artikel DPC HILLSI Sleman</span>
+        <span>📰 Kegiatan DPC HILLSI Sleman</span>
       </div>
       <button type="button" class="art-modal-close-icon" onclick="closeArtModal()" aria-label="Tutup" style="background:rgba(255,255,255,0.08);border:1px solid var(--line);color:var(--text);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;line-height:1;transition:all .2s ease;">&times;</button>
     </div>
@@ -395,7 +395,7 @@
       </div>
       <div class="art-modal-footer">
         <span style="font-size:13px;color:var(--muted);">DPC HILLSI Kabupaten Sleman &bull; Pelatihan Vokasi &amp; Sertifikasi</span>
-        <button type="button" class="btn s" onclick="closeArtModal()" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:10px;font-weight:700;">&larr; Kembali ke Artikel</button>
+        <button type="button" class="btn s" onclick="closeArtModal()" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:10px;font-weight:700;">&larr; Kembali ke Kegiatan</button>
       </div>
     </div>
   </div>
