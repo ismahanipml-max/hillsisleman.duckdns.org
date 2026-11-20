@@ -323,11 +323,10 @@
       @foreach(array_slice($kegiatanArticles, 0, 2) as $a)
         <article class="news-card rv in" onclick="openArticle({{ $a['id'] }})" title="Klik untuk membaca selengkapnya">
           <div class="news-thumb">
-            <div class="news-thumb-bg" style="background:linear-gradient(135deg, {{ $a['warna'] ?? '#0b5d63' }}, #051317);">
-              <span class="news-icon">{{ $a['ikon'] ?? '📰' }}</span>
-            </div>
             @if(!empty($a['foto']))
-              <img src="{{ $a['foto'] }}" alt="{{ $a['judul'] }}" loading="lazy" onerror="this.remove()">
+              <img src="{{ $a['foto'] }}" alt="{{ $a['judul'] }}" loading="lazy">
+            @else
+              <div class="news-thumb-bg" style="background:linear-gradient(135deg, {{ $a['warna'] ?? '#0b5d63' }}, #051317);"></div>
             @endif
           </div>
           <div class="news-body">
@@ -369,9 +368,7 @@
     </div>
     <div id="artModalHeaderWrap" class="art-modal-header" style="position:relative;width:100%;height:240px;overflow:hidden;background:#0b1d28;display:flex;align-items:center;justify-content:center;">
       <img id="artModalImg" src="" alt="Foto Berita" style="width:100%;height:100%;object-fit:cover;display:none;">
-      <div id="artModalFallback" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
-        <span id="artModalIcon" style="font-size:72px;position:relative;z-index:2;filter:drop-shadow(0 4px 10px rgba(0,0,0,.4));">📰</span>
-      </div>
+      <div id="artModalFallback" style="width:100%;height:100%;display:none;position:relative;overflow:hidden;"></div>
     </div>
     <div class="art-modal-content" style="padding:26px 30px;">
       <div class="art-meta" style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
@@ -532,13 +529,13 @@ function renderArticles() {
   items.forEach(function(a) {
     var bgGrad = 'linear-gradient(135deg,' + (a.warna || '#0b5d63') + ',#000a)';
     var hasImg = !!a.foto;
+    var thumbHtml = hasImg 
+      ? '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" loading="lazy">' 
+      : '<div class="news-thumb-bg" style="background:' + bgGrad + ';"></div>';
 
     h += '<article class="news-card rv in" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca selengkapnya">' +
            '<div class="news-thumb">' +
-             '<div class="news-thumb-bg" style="background:' + bgGrad + ';">' +
-               '<span class="news-icon">' + (a.ikon || '📰') + '</span>' +
-             '</div>' +
-             (hasImg ? '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" loading="lazy" onerror="this.remove()">' : '') +
+             thumbHtml +
            '</div>' +
            '<div class="news-body">' +
              '<div class="news-date">📅 ' + esc(a.tanggal) + '</div>' +
@@ -592,12 +589,10 @@ function openArticle(id) {
   var headerWrap = $("artModalHeaderWrap");
   var modalImg = $("artModalImg");
   var modalFallback = $("artModalFallback");
-  var modalIcon = $("artModalIcon");
 
   if (headerWrap) {
     headerWrap.style.background = 'linear-gradient(135deg,' + (art.warna || '#0b5d63') + ',#000a)';
   }
-  if (modalIcon) modalIcon.textContent = art.ikon || '📰';
 
   if (modalImg) {
     if (art.foto) {
@@ -606,12 +601,12 @@ function openArticle(id) {
       modalImg.style.display = 'block';
       modalImg.onerror = function() {
         modalImg.style.display = 'none';
-        if (modalFallback) modalFallback.style.display = 'flex';
+        if (modalFallback) modalFallback.style.display = 'block';
       };
       if (modalFallback) modalFallback.style.display = 'none';
     } else {
       modalImg.style.display = 'none';
-      if (modalFallback) modalFallback.style.display = 'flex';
+      if (modalFallback) modalFallback.style.display = 'block';
     }
   }
 
