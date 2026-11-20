@@ -85,18 +85,23 @@
 </section>
 
 @php
+  $getBeritaFoto = function($num) {
+    $rel = 'images/berita/berita' . $num . '.jpg';
+    return file_exists(public_path($rel)) ? asset($rel) : null;
+  };
+
   $kegiatanArticles = [
     [
       'id' => 1,
       'ikon' => '🚁',
-      'warna' => '#0b5d63',
+      'warna' => '#0e4c54',
       'judul' => 'Sasar Peluang Kerja Digital, Pemkab Sleman Gelar Pelatihan Drone Aerial bagi Warga',
       'kategori' => 'Pelatihan Vokasi',
       'tanggal' => '10 Maret 2026',
       'penulis' => 'Disnaker & Humas Pemkab Sleman',
       'sumber' => 'https://slemankab.go.id',
       'sumber_teks' => 'slemankab.go.id',
-      'foto' => asset('images/berita/berita1.jpg'),
+      'foto' => $getBeritaFoto(1),
       'ringkasan' => 'Pemkab Sleman bersama LPK Pusat Pelatihan Drone Indonesia membuka pelatihan drone aerial bagi warga dalam rangka Program Jaringan Pengamanan Sosial (JPS) untuk memperluas peluang kerja digital.',
       'isi' => [
         'Pemerintah Kabupaten Sleman melalui Dinas Tenaga Kerja dan Dinas Sosial kembali menunjukkan komitmen nyatanya dalam meningkatkan kompetensi sumber daya manusia dengan menyelenggarakan Pelatihan Drone Aerial. Program ini merupakan bagian dari Pelatihan Kerja Berdasarkan Kompetensi yang didanai melalui Program Jaringan Pengamanan Sosial (JPS).',
@@ -110,14 +115,14 @@
     [
       'id' => 2,
       'ikon' => '🤝',
-      'warna' => '#c2410c',
+      'warna' => '#8a3314',
       'judul' => 'Rapat Koordinasi DPC HILLSI Bahas Program 2027',
       'kategori' => 'Koordinasi DPC',
       'tanggal' => '14 November 2026',
       'penulis' => 'Pengurus DPC HILLSI Sleman',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita2.jpg'),
+      'foto' => $getBeritaFoto(2),
       'ringkasan' => 'Pengurus DPC dan perwakilan LPK menyusun rencana kegiatan dan target kolaborasi tahun depan.',
       'isi' => [
         'SLEMAN — Pengurus Dewan Pimpinan Cabang Himpunan Lembaga Pelatihan Seluruh Indonesia (DPC HILLSI) Kabupaten Sleman menggelar rapat koordinasi strategis bersama pimpinan Lembaga Pelatihan Kerja se-Kabupaten Sleman guna mematangkan agenda kerja tahun 2027.',
@@ -128,14 +133,14 @@
     [
       'id' => 3,
       'ikon' => '📜',
-      'warna' => '#1d4ed8',
+      'warna' => '#1e40af',
       'judul' => 'Uji Kompetensi Nasional BNSP Diikuti Ratusan Peserta Pelatihan Vokasi',
       'kategori' => 'Sertifikasi Resmi',
       'tanggal' => '10 November 2026',
       'penulis' => 'LSP & Divisi Sertifikasi',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita3.jpg'),
+      'foto' => $getBeritaFoto(3),
       'ringkasan' => 'Pelaksanaan asesmen dan uji sertifikasi kompetensi kerja berstandar nasional bersama Lembaga Sertifikasi Profesi (LSP) berlisensi BNSP.',
       'isi' => [
         'SLEMAN — Ratusan peserta dari berbagai kejuruan vokasi di Kabupaten Sleman antusias mengikuti uji kompetensi kerja nasional yang diselenggarakan bekerja sama dengan Lembaga Sertifikasi Profesi (LSP) berlisensi Badan Nasional Sertifikasi Profesi (BNSP).',
@@ -146,14 +151,14 @@
     [
       'id' => 4,
       'ikon' => '🏢',
-      'warna' => '#047857',
+      'warna' => '#065f46',
       'judul' => "Sinkronisasi Kurikulum 'Link and Match' Pererat Sinergi dengan Mitra Industri",
       'kategori' => 'Kemitraan Industri',
       'tanggal' => '5 November 2026',
       'penulis' => 'Bidang Kerjasama Industri',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita4.jpg'),
+      'foto' => $getBeritaFoto(4),
       'ringkasan' => 'HILLSI Sleman bersama asosiasi dunia usaha menggelar sarasehan kurikulum guna menyelaraskan kompetensi lulusan dengan kebutuhan kerja nyata.',
       'isi' => [
         'SLEMAN — Dalam upaya meminimalisir kesenjangan antara keterampilan lulusan pelatihan dan kebutuhan riil industri, DPC HILLSI Sleman mengadakan sarasehan kemitraan industri Link and Match.',
@@ -164,14 +169,14 @@
     [
       'id' => 5,
       'ikon' => '🛡️',
-      'warna' => '#b45309',
+      'warna' => '#92400e',
       'judul' => 'Penerapan Standar Keselamatan dan Kesehatan Kerja (K3) di Bengkel Latih LPK',
       'kategori' => 'Praktik & K3',
       'tanggal' => '28 Oktober 2026',
       'penulis' => 'Divisi K3 & Operasional',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita5.jpg'),
+      'foto' => $getBeritaFoto(5),
       'ringkasan' => 'Sosialisasi dan simulasi tanggap darurat keselamatan kerja di lingkungan bengkel latihan dicanangkan untuk menciptakan lingkungan belajar yang aman dan terstandar.',
       'isi' => [
         'SLEMAN — Penerapan standar Keselamatan dan Kesehatan Kerja (K3) menjadi prioritas utama di seluruh bengkel latihan dan laboratorium kejuruan LPK binaan DPC HILLSI Sleman.',
@@ -182,14 +187,14 @@
     [
       'id' => 6,
       'ikon' => '🎪',
-      'warna' => '#7e22ce',
+      'warna' => '#6b21a8',
       'judul' => 'Bursa Pelatihan Vokasi Sleman 2026 Diserbu Ribuan Pencari Kerja Muda',
       'kategori' => 'Sinergi Pemerintah',
       'tanggal' => '22 Oktober 2026',
       'penulis' => 'Humas DPC HILLSI Sleman',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita6.jpg'),
+      'foto' => $getBeritaFoto(6),
       'ringkasan' => 'Expo pelatihan dan informasi bursa kerja terpadu kolaborasi DPC HILLSI dan Disnaker berhasil memfasilitasi pendaftaran beasiswa kursus vokasi.',
       'isi' => [
         'SLEMAN — Antusiasme luar biasa mewarnai perhelatan Bursa Pelatihan Vokasi Sleman 2026 yang dihelat bersama Dinas Tenaga Kerja Kabupaten Sleman.',
@@ -200,14 +205,14 @@
     [
       'id' => 7,
       'ikon' => '📱',
-      'warna' => '#0284c7',
+      'warna' => '#0369a1',
       'judul' => 'Workshop Digital Marketing & Branding Lembaga Pelatihan untuk Pengelola LPK',
       'kategori' => 'Manajemen LPK',
       'tanggal' => '17 Oktober 2026',
       'penulis' => 'Bidang Humas & Media',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita7.jpg'),
+      'foto' => $getBeritaFoto(7),
       'ringkasan' => 'Program pembekalan strategi pemasaran digital, optimasi media sosial, dan branding institusi guna memperluas jangkauan pendaftaran calon peserta didik vokasi.',
       'isi' => [
         'SLEMAN — Era digital menuntut lembaga pelatihan kerja untuk adaptif dalam mengomunikasikan program-program unggulannya kepada calon siswa melalui media daring.',
@@ -218,14 +223,14 @@
     [
       'id' => 8,
       'ikon' => '🏅',
-      'warna' => '#059669',
+      'warna' => '#047857',
       'judul' => 'Klinik Akreditasi Lembaga Pelatihan Kerja Percepat Pemenuhan Standar Mutu',
       'kategori' => 'Akreditasi Mutu',
       'tanggal' => '12 Oktober 2026',
       'penulis' => 'Divisi Penjaminan Mutu',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita8.jpg'),
+      'foto' => $getBeritaFoto(8),
       'ringkasan' => 'Pendampingan intensif bagi tim pengelola LPK dalam penyusunan borang akreditasi LA-LPK guna meraih predikat akreditasi unggul.',
       'isi' => [
         'SLEMAN — DPC HILLSI Sleman secara berkala menggelar klinik akreditasi guna mendampingi pengelola LPK dalam memenuhi 8 standar mutu akreditasi kelembagaan LA-LPK.',
@@ -236,14 +241,14 @@
     [
       'id' => 9,
       'ikon' => '💡',
-      'warna' => '#d97706',
+      'warna' => '#b45309',
       'judul' => 'Inkubasi Wirausaha Mandiri bagi Alumni Pelatihan Kejuruan Kreatif & Jasa',
       'kategori' => 'Kewirausahaan',
       'tanggal' => '5 Oktober 2026',
       'penulis' => 'Bidang Pengembangan Usaha',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita9.jpg'),
+      'foto' => $getBeritaFoto(9),
       'ringkasan' => 'Program inkubasi bisnis pasca-pelatihan untuk membina alumni menjadi pelaku wirausaha baru yang berdaya saing dan mandiri secara ekonomi.',
       'isi' => [
         'SLEMAN — Selain menyiapkan tenaga kerja terampil untuk diserap perusahaan, DPC HILLSI Sleman turut mendorong lahirnya wirausahawan baru melalui program inkubasi bisnis mandiri.',
@@ -254,14 +259,14 @@
     [
       'id' => 10,
       'ikon' => '🏭',
-      'warna' => '#4f46e5',
+      'warna' => '#3730a3',
       'judul' => 'Studi Lapangan Industri Manufaktur Modern Tingkatkan Wawasan Instruktur LPK',
       'kategori' => 'Studi Lapangan',
       'tanggal' => '28 September 2026',
       'penulis' => 'Tim Pembina Vokasi',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita10.jpg'),
+      'foto' => $getBeritaFoto(10),
       'ringkasan' => 'Kunjungan kerja ke pabrik manufaktur modern untuk mengadopsi budaya kerja industri, otomatisasi mesin, dan standar kedisiplinan kerja 5R.',
       'isi' => [
         'SLEMAN — Tim instruktur kejuruan teknik dan manufaktur LPK binaan HILLSI Sleman melakukan studi lapangan ke fasilitas pabrik manufaktur berteknologi modern.',
@@ -272,14 +277,14 @@
     [
       'id' => 11,
       'ikon' => '🌐',
-      'warna' => '#0891b2',
+      'warna' => '#0e7490',
       'judul' => 'Standardisasi Kurikulum Bahasa Asing Siapkan Lulusan Berkarir di Luar Negeri',
       'kategori' => 'Karir Global',
       'tanggal' => '21 September 2026',
       'penulis' => 'Bidang Hubungan Luar Negeri',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita11.jpg'),
+      'foto' => $getBeritaFoto(11),
       'ringkasan' => 'Pembahasan silabus kurikulum bahasa Jepang, Korea, dan Jerman beserta sertifikasi kompetensi untuk program Specified Skilled Worker (SSW).',
       'isi' => [
         'SLEMAN — Kebutuhan tenaga kerja berketerampilan khusus di kancah internasional menjadi peluang besar bagi lulusan LPK di Kabupaten Sleman.',
@@ -290,14 +295,14 @@
     [
       'id' => 12,
       'ikon' => '🏆',
-      'warna' => '#9333ea',
+      'warna' => '#701a75',
       'judul' => 'Apresiasi Kemitraan Industri DPC HILLSI Sleman: Penghargaan Mitra Terbaik',
       'kategori' => 'Mitra & Rekanan',
       'tanggal' => '15 September 2026',
       'penulis' => 'Sekretariat DPC HILLSI',
       'sumber' => '',
       'sumber_teks' => '',
-      'foto' => asset('images/berita/berita12.jpg'),
+      'foto' => $getBeritaFoto(12),
       'ringkasan' => 'Penganugerahan apresiasi kepada perusahaan mitra yang paling aktif dalam membuka program magang bersertifikat dan menyerap lulusan LPK Sleman.',
       'isi' => [
         'SLEMAN — Hubungan sinergis antara dunia vokasi dan industri dirayakan melalui malam penganugerahan Apresiasi Kemitraan Industri DPC HILLSI Sleman.',
