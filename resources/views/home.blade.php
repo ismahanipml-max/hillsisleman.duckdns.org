@@ -88,6 +88,7 @@
   $kegiatanArticles = [
     [
       'id' => 0,
+      'ikon' => '🏛️',
       'judul' => 'Rapat Koordinasi DPC HILLSI Sleman Perkuat Standardisasi dan Mutu Vokasi 2026',
       'kategori' => 'Koordinasi DPC',
       'tanggal' => '18 November 2026',
@@ -102,6 +103,7 @@
     ],
     [
       'id' => 1,
+      'ikon' => '💻',
       'judul' => 'Pelatihan Berbasis Kompetensi Teknologi Terapan Sukses Diikuti Puluhan Instruktur',
       'kategori' => 'Pelatihan Vokasi',
       'tanggal' => '14 November 2026',
@@ -116,6 +118,7 @@
     ],
     [
       'id' => 2,
+      'ikon' => '📜',
       'judul' => 'Asesmen dan Uji Kompetensi Nasional BNSP Resmi Digelar Serentak di Sleman',
       'kategori' => 'Sertifikasi Resmi',
       'tanggal' => '10 November 2026',
@@ -130,6 +133,7 @@
     ],
     [
       'id' => 3,
+      'ikon' => '🤝',
       'judul' => "Sinkronisasi Kurikulum 'Link and Match' Pererat Sinergi LPK dengan Mitra Industri",
       'kategori' => 'Kemitraan Industri',
       'tanggal' => '5 November 2026',
@@ -144,6 +148,7 @@
     ],
     [
       'id' => 4,
+      'ikon' => '🛡️',
       'judul' => 'Penerapan SOP Keselamatan dan Kesehatan Kerja (K3) Jadi Standar Baku Seluruh LPK',
       'kategori' => 'Praktik & K3',
       'tanggal' => '28 Oktober 2026',
@@ -158,6 +163,7 @@
     ],
     [
       'id' => 5,
+      'ikon' => '🏢',
       'judul' => 'Kolaborasi DPC HILLSI dan Disnaker Sleman Sukses Gelar Bursa Pelatihan Vokasi',
       'kategori' => 'Sinergi Pemerintah',
       'tanggal' => '22 Oktober 2026',
@@ -176,11 +182,11 @@
 <section id="kegiatan">
   <div class="wrap">
     <div class="eye rv">Artikel Kegiatan</div>
-    <h2 class="rv">Berita & Dokumentasi Kegiatan</h2>
-    <p class="sub rv" style="max-width:none">Kumpulan artikel, liputan program kerja, pelatihan vokasi, serta dokumentasi kegiatan resmi DPC HILLSI Kabupaten Sleman.</p>
+    <h2 class="rv">Berita & Kegiatan DPC Sleman</h2>
+    <p class="sub rv" style="max-width:none">Dokumentasi koordinasi kelembagaan, pelatihan vokasi, sertifikasi kompetensi, dan sinergi kemitraan DPC HILLSI Kabupaten Sleman.</p>
 
-    <!-- Kontainer Daftar Artikel (2 Artikel per Halaman) -->
-    <div id="kegiatanArticleList" class="kegiatan-grid-2"></div>
+    <!-- Kontainer Daftar Artikel (2 Kartu persis seperti Tentang Kami) -->
+    <div id="kegiatanCardList" class="grid2"></div>
 
     <!-- Navigasi Halaman Artikel (Next / Prev) -->
     <div id="kegiatanPagination" class="pagination-wrap"></div>
@@ -344,28 +350,15 @@ function renderArticles() {
 
   var h = "";
   items.forEach(function(a) {
-    h += '<article class="art-card rv in">' +
-           '<div class="art-thumb" onclick="openArticle(' + a.id + ')" title="Klik untuk membaca artikel">' +
-             '<img src="' + a.foto + '" alt="' + esc(a.judul) + '" loading="lazy">' +
-             '<div class="art-overlay">📖 Baca Artikel Lengkap</div>' +
-           '</div>' +
-           '<div class="art-body">' +
-             '<div class="art-meta">' +
-               '<span class="art-tag">' + esc(a.kategori) + '</span>' +
-               '<span class="art-date">📅 ' + esc(a.tanggal) + '</span>' +
-             '</div>' +
-             '<h3 class="art-title" onclick="openArticle(' + a.id + ')">' + esc(a.judul) + '</h3>' +
-             '<p class="art-excerpt">' + esc(a.ringkasan) + '</p>' +
-             '<div class="art-foot">' +
-               '<div class="art-author">✍️ <span>' + esc(a.penulis) + '</span></div>' +
-               '<button type="button" class="art-read-btn" onclick="openArticle(' + a.id + ')">Baca Selengkapnya →</button>' +
-             '</div>' +
-           '</div>' +
-         '</article>';
+    h += '<div class="card rv in" onclick="openArticle(' + a.id + ')" style="cursor:pointer;" title="Klik untuk membaca selengkapnya">' +
+           '<div class="ic">' + a.ikon + '</div>' +
+           '<h3>' + esc(a.judul) + '</h3>' +
+           '<p style="text-align: left; line-height: 1.65;">' + esc(a.ringkasan) + '</p>' +
+         '</div>';
   });
 
-  if ($("kegiatanArticleList")) {
-    $("kegiatanArticleList").innerHTML = h;
+  if ($("kegiatanCardList")) {
+    $("kegiatanCardList").innerHTML = h;
   }
 
   // Navigasi Pagination Artikel (Prev / 1 / 2 / 3 / Next)
