@@ -315,16 +315,45 @@
 
 <section id="kegiatan" class="alt">
   <div class="wrap">
-    <div class="eye rv">Berita & Kegiatan</div>
     <h2 class="rv" style="font-size:clamp(26px,3.5vw,34px);font-weight:800;margin:0 0 8px;color:var(--text);">Berita & Kegiatan</h2>
     <p class="sub rv" style="color:var(--muted);margin:0 0 32px;font-size:15px;max-width:none;">Kabar terbaru dari DPC HILLSI Sleman dan lembaga pelatihan anggota.</p>
 
     <!-- Kontainer Daftar Artikel Berita (Grid Card Bersebelahan) -->
-    <div id="kegiatanCardList" class="news-grid"></div>
+    <div id="kegiatanCardList" class="news-grid">
+      @foreach(array_slice($kegiatanArticles, 0, 2) as $a)
+        <article class="news-card rv in" onclick="openArticle({{ $a['id'] }})" title="Klik untuk membaca selengkapnya">
+          <div class="news-thumb">
+            <div class="news-thumb-bg" style="background:linear-gradient(135deg, {{ $a['warna'] ?? '#0b5d63' }}, #051317);">
+              <span class="news-icon">{{ $a['ikon'] ?? '📰' }}</span>
+            </div>
+            @if(!empty($a['foto']))
+              <img src="{{ $a['foto'] }}" alt="{{ $a['judul'] }}" loading="lazy" onerror="this.remove()">
+            @endif
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 {{ $a['tanggal'] }}</div>
+            <h3 class="news-title">{{ $a['judul'] }}</h3>
+            <p class="news-desc">{{ $a['ringkasan'] }}</p>
+            <button type="button" class="news-btn" onclick="event.stopPropagation();openArticle({{ $a['id'] }});">
+              <span>Baca Selengkapnya &rarr;</span>
+            </button>
+          </div>
+        </article>
+      @endforeach
+    </div>
 
     <!-- Navigasi Halaman Artikel: Previous | 1-6 | Next -->
-    <div id="kegiatanPagination" class="news-pagination"></div>
-    <div id="kegiatanCountText" class="news-count-text rv"></div>
+    <div id="kegiatanPagination" class="news-pagination">
+      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(1)" disabled aria-label="Previous">Previous</button>
+      <button type="button" class="news-pagi-btn active" onclick="kegiatanGoPage(1)" aria-label="Halaman 1">1</button>
+      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(2)" aria-label="Halaman 2">2</button>
+      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(3)" aria-label="Halaman 3">3</button>
+      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(4)" aria-label="Halaman 4">4</button>
+      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(5)" aria-label="Halaman 5">5</button>
+      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(6)" aria-label="Halaman 6">6</button>
+      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(2)" aria-label="Next">Next</button>
+    </div>
+    <div id="kegiatanCountText" class="news-count-text rv">Menampilkan artikel 1-2 dari 12</div>
   </div>
 </section>
 
@@ -781,9 +810,14 @@ document.addEventListener("click", function(e) {
   if (s && !e.target.closest(".sbox")) s.classList.remove("on");
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", function() {
+    draw();
+    renderArticles();
+  });
+} else {
   draw();
   renderArticles();
-});
+}
 </script>
 @endpush

@@ -6,7 +6,7 @@
 <title>@yield('title', 'DPC HILLSI Kabupaten Sleman')</title>
 <link rel="icon" type="image/png" href="{{ asset('images/logo-hillsi.png') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="{{ asset('style.css') }}">
+<link rel="stylesheet" href="{{ asset('style.css') }}?v={{ file_exists(public_path('style.css')) ? filemtime(public_path('style.css')) : time() }}">
 @stack('styles')
 </head>
 <body>
