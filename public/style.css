@@ -124,6 +124,9 @@ h2{font-size:clamp(24px,3.5vw,34px);margin:4px 0 8px;font-weight:800;color:var(-
 .lc:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .cv{height:120px;display:grid;place-items:center;color:#fff;font-size:44px;position:relative;overflow:hidden}
 .cv:after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.14);right:-40px;top:-50px}
+.kegiatan-cv{height:180px;position:relative;overflow:hidden;background:#0b1d28}
+.kegiatan-cv img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.lc:hover .kegiatan-cv img{transform:scale(1.05)}
 .lc .b{padding:16px}.lc h4{margin:0 0 8px;font-size:16px;line-height:1.3;color:var(--text)}
 .pill{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:rgba(9,209,199,.15);color:#0C6478}
 .lc .go{display:none!important}
