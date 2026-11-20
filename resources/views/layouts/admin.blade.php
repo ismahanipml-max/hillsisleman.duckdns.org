@@ -857,6 +857,11 @@
                 <span>Data LPK</span>
             </a>
 
+            <a href="{{ route('admin.articles.index') }}" class="menu-link {{ request()->routeIs('admin.articles.*') ? 'active' : '' }}">
+                <span class="icon">📰</span>
+                <span>Berita & Kegiatan</span>
+            </a>
+
             <a href="{{ route('admin.settings.edit') }}" class="menu-link {{ request()->routeIs('admin.settings.*') ? 'active' : '' }}">
                 <span class="icon">⚙️</span>
                 <span>Pengaturan</span>

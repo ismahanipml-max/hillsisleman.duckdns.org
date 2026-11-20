@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Lpk;
+use App\Models\Article;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,30 @@ class PublicController extends Controller
             ];
         })->values();
 
-        return view('home', compact('settings', 'lpks', 'categories', 'lpksJson'));
+        // Ambil data Berita & Kegiatan dari database
+        $dbArticles = Article::where('aktif', true)
+            ->orderBy('urutan')
+            ->orderByDesc('id')
+            ->get();
+
+        $articlesData = $dbArticles->map(function ($item) {
+            return [
+                'id' => $item->id,
+                'ikon' => $item->ikon ?: '📰',
+                'warna' => $item->warna ?: '#0e4c54',
+                'judul' => $item->judul,
+                'kategori' => $item->kategori ?: 'Berita',
+                'tanggal' => $item->tanggal,
+                'penulis' => $item->penulis ?: 'DPC HILLSI Sleman',
+                'sumber' => $item->sumber,
+                'sumber_teks' => $item->sumber_teks,
+                'foto' => $item->foto_url,
+                'ringkasan' => $item->ringkasan,
+                'isi' => is_array($item->isi) ? $item->isi : (empty($item->isi) ? [$item->ringkasan] : [$item->isi]),
+            ];
+        })->values()->toArray();
+
+        return view('home', compact('settings', 'lpks', 'categories', 'lpksJson', 'articlesData'));
     }
 
     public function show(string $slug)

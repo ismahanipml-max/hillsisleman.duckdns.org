@@ -3,6 +3,7 @@
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LpkController;
+use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,9 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('lpks', LpkController::class);
     Route::post('lpks/{lpk}/toggle-active', [LpkController::class, 'toggleActive'])->name('lpks.toggle-active');
     Route::delete('lpks/{lpk}/gallery/{gallery}', [LpkController::class, 'destroyGallery'])->name('lpks.gallery.destroy');
+
+    Route::resource('articles', ArticleController::class);
+    Route::post('articles/{article}/toggle-active', [ArticleController::class, 'toggleActive'])->name('articles.toggle-active');
 
     Route::get('settings', [SettingController::class, 'edit'])->name('settings.edit');
     Route::post('settings', [SettingController::class, 'update'])->name('settings.update');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Lpk;
+use App\Models\Article;
 use App\Models\LpkService;
 use App\Models\LpkPartner;
 use App\Models\LpkGallery;
@@ -18,6 +19,8 @@ class DashboardController extends Controller
         $totalServices = LpkService::count();
         $totalPartners = LpkPartner::count();
         $totalGalleries = LpkGallery::count();
+        $totalArticles = Article::count();
+        $activeArticles = Article::where('aktif', true)->count();
 
         // Bidang count for bar chart
         $bidangCounts = Lpk::select('bidang', DB::raw('count(*) as total'))
@@ -30,14 +33,21 @@ class DashboardController extends Controller
             ->take(5)
             ->get();
 
+        $latestArticles = Article::latest('id')
+            ->take(4)
+            ->get();
+
         return view('admin.dashboard', compact(
             'totalLpk',
             'activeLpk',
             'totalServices',
             'totalPartners',
             'totalGalleries',
+            'totalArticles',
+            'activeArticles',
             'bidangCounts',
-            'latestLpks'
+            'latestLpks',
+            'latestArticles'
         ));
     }
 }

@@ -90,7 +90,7 @@
     return file_exists(public_path($rel)) ? asset($rel) : null;
   };
 
-  $kegiatanArticles = [
+  $kegiatanArticles = !empty($articlesData) ? $articlesData : [
     [
       'id' => 1,
       'ikon' => '🚁',
