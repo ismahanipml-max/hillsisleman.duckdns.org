@@ -173,30 +173,30 @@ footer{background:#213A58;color:#b8d4dc;text-align:center;padding:28px 20px;font
 .lb-cnt{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(33,58,88,.85);color:#80EE98;border:1px solid rgba(70,223,177,.3);padding:6px 18px;border-radius:99px;font-size:13px;font-weight:700;z-index:1001;letter-spacing:.05em}
 .note{font-size:12px;color:var(--muted);margin-top:14px}
 /* Seksi Berita & Kegiatan */
-.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:32px;max-width:980px;margin-left:auto;margin-right:auto}
-@media(max-width:768px){.news-grid{grid-template-columns:1fr;gap:22px}}
-.news-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,.06);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-.news-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(21,145,155,.45)}
-.news-thumb{position:relative;width:100%;height:210px;aspect-ratio:16/9;overflow:hidden;background:#0b1d28;cursor:pointer}
-.news-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:28px;max-width:960px;margin-left:auto;margin-right:auto}
+@media(max-width:768px){.news-grid{grid-template-columns:1fr;gap:20px}}
+.news-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 18px rgba(0,0,0,.08);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;cursor:pointer}
+.news-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(21,145,155,.45)}
+.news-thumb{position:relative;width:100%;aspect-ratio:16/9;max-height:230px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.news-thumb-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.news-thumb-bg:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.12);right:-30px;top:-40px}
+.news-thumb img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;transition:transform .35s ease}
 .news-card:hover .news-thumb img{transform:scale(1.05)}
-.news-badge{position:absolute;top:14px;left:14px;padding:4px 12px;border-radius:99px;background:rgba(12,100,120,.92);color:#80EE98;font-size:11.5px;font-weight:700;backdrop-filter:blur(6px);border:1px solid rgba(70,223,177,.35);z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-.news-content{padding:22px;display:flex;flex-direction:column;flex:1}
-.news-meta{display:flex;align-items:center;gap:14px;font-size:12.5px;color:var(--muted);font-weight:600;margin-bottom:10px;flex-wrap:wrap}
-.news-date{display:inline-flex;align-items:center;gap:4px}
-.news-author{display:inline-flex;align-items:center;gap:4px}
-.news-title{margin:0 0 10px;font-size:17.5px;line-height:1.42;font-weight:800;color:var(--text);cursor:pointer;transition:color .2s ease;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.news-title:hover{color:var(--brand)}
-.news-desc{margin:0 0 18px;color:var(--muted);font-size:14px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
-.news-footer{display:flex;align-items:center;justify-content:flex-start;padding-top:16px;border-top:1px solid var(--line);margin-top:auto}
-.news-btn-read{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(21,145,155,.12);border:1.5px solid rgba(21,145,155,.4);color:var(--brand);font-weight:700;font-size:13.5px;border-radius:10px;cursor:pointer;transition:all .2s ease;text-decoration:none;font-family:inherit}
-:root[data-theme="dark"] .news-btn-read{color:#46DFB1;border-color:rgba(70,223,177,.35)}
-.news-btn-read:hover{background:linear-gradient(135deg,#0C6478,#15919B);color:#fff;border-color:transparent;transform:translateY(-2px);box-shadow:0 4px 12px rgba(12,100,120,.3)}
+.news-icon{font-size:54px;position:relative;z-index:2;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35));transition:transform .3s ease}
+.news-card:hover .news-icon{transform:scale(1.1)}
+.news-body{padding:22px 24px;display:flex;flex-direction:column;flex:1}
+.news-date{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.news-title{margin:0 0 10px;font-size:18px;line-height:1.4;font-weight:800;color:var(--text);transition:color .2s ease}
+.news-card:hover .news-title{color:var(--brand)}
+.news-desc{margin:0 0 20px;color:var(--muted);font-size:14px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.news-btn{display:inline-flex;align-items:center;gap:6px;background:#15919B;color:#fff;border:none;border-radius:9px;padding:9px 18px;font-size:13.5px;font-weight:700;cursor:pointer;transition:all .2s ease;align-self:flex-start;font-family:inherit;box-shadow:0 2px 8px rgba(21,145,155,.3)}
+.news-btn:hover{background:#0C6478;transform:translateY(-2px);box-shadow:0 4px 12px rgba(12,100,120,.4)}
 .news-pagination{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:36px;flex-wrap:wrap}
-.news-pagi-btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 15px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--text);font:700 14px inherit;font-family:inherit;cursor:pointer;transition:all .2s ease;user-select:none}
+.news-pagi-btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--text);font:700 14px inherit;font-family:inherit;cursor:pointer;transition:all .2s ease;user-select:none}
 .news-pagi-btn:hover:not(:disabled){border-color:#15919B;color:#15919B;transform:translateY(-1px)}
 .news-pagi-btn.active{background:linear-gradient(135deg,#0C6478,#15919B);color:#fff;border-color:transparent;box-shadow:0 4px 14px rgba(12,100,120,.28)}
 .news-pagi-btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.news-count-text{text-align:center;margin-top:14px;font-size:13.5px;color:var(--muted);font-weight:600}
 
 /* Modal Baca Artikel Kegiatan */
 .art-modal{position:fixed;inset:0;background:rgba(10,20,32,.88);backdrop-filter:blur(8px);z-index:998;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
