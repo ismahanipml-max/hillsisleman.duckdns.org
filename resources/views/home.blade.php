@@ -341,15 +341,11 @@
       @endforeach
     </div>
 
-    <!-- Navigasi Halaman Artikel: Previous | 1-6 | Next -->
+    <!-- Navigasi Halaman Artikel: Previous | 1-2 | Next -->
     <div id="kegiatanPagination" class="news-pagination">
       <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(1)" disabled aria-label="Previous">Previous</button>
       <button type="button" class="news-pagi-btn active" onclick="kegiatanGoPage(1)" aria-label="Halaman 1">1</button>
       <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(2)" aria-label="Halaman 2">2</button>
-      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(3)" aria-label="Halaman 3">3</button>
-      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(4)" aria-label="Halaman 4">4</button>
-      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(5)" aria-label="Halaman 5">5</button>
-      <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(6)" aria-label="Halaman 6">6</button>
       <button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(2)" aria-label="Next">Next</button>
     </div>
     <div id="kegiatanCountText" class="news-count-text rv">Menampilkan artikel 1-2 dari 12</div>
@@ -560,11 +556,14 @@ function renderArticles() {
     $("kegiatanCardList").innerHTML = h;
   }
 
-  // Format Pagination: Previous | 1-6 | Next
+  // Format Pagination: Previous | 2 Angka Halaman | Next
   var pagiHtml = "";
   if (totalPages > 1) {
+    var startPage = Math.floor((ART_PAGE - 1) / 2) * 2 + 1;
+    var endPage = Math.min(startPage + 1, totalPages);
+
     pagiHtml += '<button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE - 1) + ')" ' + (ART_PAGE === 1 ? 'disabled' : '') + ' aria-label="Previous">Previous</button>';
-    for (var p = 1; p <= totalPages; p++) {
+    for (var p = startPage; p <= endPage; p++) {
       pagiHtml += '<button type="button" class="news-pagi-btn ' + (p === ART_PAGE ? 'active' : '') + '" onclick="kegiatanGoPage(' + p + ')" aria-label="Halaman ' + p + '">' + p + '</button>';
     }
     pagiHtml += '<button type="button" class="news-pagi-btn" onclick="kegiatanGoPage(' + (ART_PAGE + 1) + ')" ' + (ART_PAGE === totalPages ? 'disabled' : '') + ' aria-label="Next">Next</button>';
