@@ -399,13 +399,6 @@
     </div>
   </div>
 </div>
-      <div id="artModalBody" class="art-modal-body"></div>
-    </div>
-    <div class="art-modal-footer">
-      <button type="button" class="btn s" onclick="closeArtModal()">Tutup Artikel</button>
-    </div>
-  </div>
-</div>
 
 <section id="kontak">
   <div class="wrap">
