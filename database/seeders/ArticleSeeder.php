@@ -258,6 +258,7 @@ class ArticleSeeder extends Seeder
 
         foreach ($articles as $art) {
             $art['slug'] = Str::slug($art['judul']);
+            $art['foto'] = 'images/berita/berita' . $art['id'] . '.jpg';
             Article::updateOrCreate(['id' => $art['id']], $art);
         }
     }
