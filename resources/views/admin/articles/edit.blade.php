@@ -163,68 +163,53 @@
         <div class="card-box">
             <div class="card-header">
                 <div>
-                    <h2>📷 Foto Dokumentasi Kegiatan</h2>
-                    <p>Unggah atau perbarui foto utama kegiatan untuk thumbnail dan halaman detail kegiatan</p>
+                    <h2>🎨 Desain Banner & Ikon Visual Kartu</h2>
+                    <p>Atur foto dokumentasi dan pratinjau kartu kegiatan</p>
                 </div>
             </div>
 
             <input type="hidden" name="ikon" id="ikon" value="{{ old('ikon', $article->ikon ?? '📰') }}">
             <input type="hidden" name="warna" id="warna" value="{{ old('warna', $article->warna ?? '#0e4c54') }}">
 
-            <div class="form-group" style="margin-bottom: 20px;">
-                <label class="form-label" for="foto">Pilih File Foto Baru (Opsional)</label>
-                <input 
-                    type="file" 
-                    name="foto" 
-                    id="foto" 
-                    class="form-control" 
-                    accept="image/*"
-                    onchange="previewImage(this)"
-                >
-                <span style="font-size: 11.5px; color: var(--text-muted);">
-                    Format: JPG, PNG, WebP (Maksimal: 3MB).
-                </span>
+            <div class="form-grid">
+                <div class="form-group col-full">
+                    <label class="form-label" for="foto">Foto Dokumentasi Thumbnail (Opsional)</label>
+                    <input 
+                        type="file" 
+                        name="foto" 
+                        id="foto" 
+                        class="form-control" 
+                        accept="image/*"
+                        onchange="previewImage(this)"
+                    >
+                    <span style="font-size: 11.5px; color: var(--text-muted);">
+                        Format: JPG, PNG, WebP (Maks: 3MB). Foto akan otomatis tampil di kartu depan dan modal pop-up kegiatan.
+                    </span>
 
-                @if($article->foto)
-                    <div style="margin-top: 12px; display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--bg); border-radius: 10px; border: 1px solid var(--border-subtle);">
-                        <img src="{{ $article->foto_url }}" alt="Foto Saat Ini" style="width: 72px; height: 50px; object-fit: cover; border-radius: 6px;">
-                        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--danger); cursor: pointer; font-weight: 600;">
-                            <input type="checkbox" name="hapus_foto" value="1">
-                            <span>Hapus foto saat ini</span>
-                        </label>
-                    </div>
-                @endif
+                    @if($article->foto)
+                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--bg); border-radius: 10px; border: 1px solid var(--border-subtle);">
+                            <img src="{{ $article->foto_url }}" alt="Foto Saat Ini" style="width: 60px; height: 42px; object-fit: cover; border-radius: 6px;">
+                            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--danger); cursor: pointer; font-weight: 600;">
+                                <input type="checkbox" name="hapus_foto" value="1">
+                                <span>Hapus foto saat ini</span>
+                            </label>
+                        </div>
+                    @endif
+                </div>
             </div>
 
             <!-- Live Card Preview -->
-            <div style="margin-top: 16px; padding: 20px; background: #061017; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="margin-top: 24px; padding: 20px; background: #061017; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
                 <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #8fa6b2; margin-bottom: 14px;">
                     👁️ Pratinjau Tampilan Kartu di Beranda:
                 </div>
                 <div style="max-width: 440px;">
                     <div style="background: #0f2129; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.25);">
-                        <div id="previewThumb" style="position: relative; width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background: #0b1d28; overflow: hidden;">
+                        <div id="previewThumb" style="position: relative; width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, {{ $article->warna ?? '#0e4c54' }}, #051317); overflow: hidden;">
+                            <div style="position: absolute; width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,0.07); right: -35px; top: -45px;"></div>
                             <img id="previewImgEl" src="{{ $article->foto ? $article->foto_url : '' }}" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; display: {{ $article->foto ? 'block' : 'none' }};">
-                            <span id="previewNoImg" style="font-size: 13.5px; color: #8fa6b2; display: {{ $article->foto ? 'none' : 'block' }}; z-index: 1;">📷 Belum Ada Foto</span>
                         </div>
                         <div style="padding: 22px 24px;">
-                            <div id="previewDate" style="font-size: 13px; color: #8fa6b2; font-weight: 600; margin-bottom: 10px;">
-                                📅 {{ $article->tanggal }}
-                            </div>
-                            <h3 id="previewTitle" style="margin: 0 0 10px; font-size: 18px; line-height: 1.38; font-weight: 800; color: #ffffff;">
-                                {{ $article->judul }}
-                            </h3>
-                            <p id="previewDesc" style="margin: 0 0 20px; color: #8fa6b2; font-size: 13.5px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
-                                {{ $article->ringkasan }}
-                            </p>
-                            <button type="button" style="background: #2aa1ab; color: #ffffff; border: none; border-radius: 10px; padding: 9px 20px; font-size: 13.5px; font-weight: 700;">
-                                Baca Selengkapnya &rarr;
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
                             <div id="previewDate" style="font-size: 13px; color: #8fa6b2; font-weight: 600; margin-bottom: 10px;">
                                 📅 {{ $article->tanggal }}
                             </div>
@@ -432,15 +417,15 @@ function fetchArticleFromUrl() {
 }
 function previewImage(input) {
     var imgEl = document.getElementById('previewImgEl');
-    var noImg = document.getElementById('previewNoImg');
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
             imgEl.src = e.target.result;
             imgEl.style.display = 'block';
-            if (noImg) noImg.style.display = 'none';
         };
         reader.readAsDataURL(input.files[0]);
+    } else {
+        imgEl.style.display = 'none';
     }
 }
 

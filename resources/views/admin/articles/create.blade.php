@@ -161,39 +161,41 @@
         <div class="card-box">
             <div class="card-header">
                 <div>
-                    <h2>📷 Foto Dokumentasi Kegiatan</h2>
-                    <p>Unggah foto utama kegiatan untuk ditampilkan pada kartu depan dan halaman baca</p>
+                    <h2>🎨 Desain Banner & Ikon Visual Kartu</h2>
+                    <p>Atur foto dokumentasi dan pratinjau kartu kegiatan</p>
                 </div>
             </div>
 
             <input type="hidden" name="ikon" id="ikon" value="{{ old('ikon', '📰') }}">
             <input type="hidden" name="warna" id="warna" value="{{ old('warna', '#0e4c54') }}">
 
-            <div class="form-group" style="margin-bottom: 20px;">
-                <label class="form-label" for="foto">Pilih File Foto</label>
-                <input 
-                    type="file" 
-                    name="foto" 
-                    id="foto" 
-                    class="form-control" 
-                    accept="image/*"
-                    onchange="previewImage(this)"
-                >
-                <span style="font-size: 11.5px; color: var(--text-muted);">
-                    Format: JPG, PNG, WebP (Maksimal: 3MB). Foto akan otomatis tampil di thumbnail depan dan pop-up kegiatan.
-                </span>
+            <div class="form-grid">
+                <div class="form-group col-full">
+                    <label class="form-label" for="foto">Foto Dokumentasi Thumbnail (Opsional)</label>
+                    <input 
+                        type="file" 
+                        name="foto" 
+                        id="foto" 
+                        class="form-control" 
+                        accept="image/*"
+                        onchange="previewImage(this)"
+                    >
+                    <span style="font-size: 11.5px; color: var(--text-muted);">
+                        Format: JPG, PNG, WebP (Maks: 3MB). Foto akan otomatis tampil di kartu depan dan modal pop-up kegiatan.
+                    </span>
+                </div>
             </div>
 
             <!-- Live Card Preview -->
-            <div style="margin-top: 16px; padding: 20px; background: #061017; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="margin-top: 24px; padding: 20px; background: #061017; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
                 <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #8fa6b2; margin-bottom: 14px;">
                     👁️ Pratinjau Tampilan Kartu di Beranda:
                 </div>
                 <div style="max-width: 440px;">
                     <div style="background: #0f2129; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.25);">
-                        <div id="previewThumb" style="position: relative; width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background: #0b1d28; overflow: hidden;">
+                        <div id="previewThumb" style="position: relative; width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0e4c54, #051317); overflow: hidden;">
+                            <div style="position: absolute; width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,0.07); right: -35px; top: -45px;"></div>
                             <img id="previewImgEl" src="" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; display: none;">
-                            <span id="previewNoImg" style="font-size: 13.5px; color: #8fa6b2; z-index: 1;">📷 Pratinjau Foto Kegiatan</span>
                         </div>
                         <div style="padding: 22px 24px;">
                             <div id="previewDate" style="font-size: 13px; color: #8fa6b2; font-weight: 600; margin-bottom: 10px;">
@@ -414,18 +416,15 @@ function selectColor(col) {
 
 function previewImage(input) {
     var imgEl = document.getElementById('previewImgEl');
-    var noImg = document.getElementById('previewNoImg');
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
             imgEl.src = e.target.result;
             imgEl.style.display = 'block';
-            if (noImg) noImg.style.display = 'none';
         };
         reader.readAsDataURL(input.files[0]);
     } else {
         imgEl.style.display = 'none';
-        if (noImg) noImg.style.display = 'block';
     }
 }
 
